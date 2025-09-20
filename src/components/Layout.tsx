@@ -36,7 +36,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <div className="text-2xl font-display font-bold text-primary">NoSh</div>
+              <div className="text-2xl font-display font-bold text-primary">NoSh**</div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -106,7 +106,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="grid md:grid-cols-4 gap-12">
             {/* Brand */}
             <div>
-              <div className="text-2xl font-display font-bold text-primary mb-6">NoSh</div>
+              <div className="text-2xl font-display font-bold text-primary mb-6">NoSh**</div>
               <p className="text-primary mb-6 font-body text-xl">Straight, honest writing about food</p>
               <p className="text-primary font-body">
                 Evidence-based nutrition information for everyday decisions
@@ -118,7 +118,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <h3 className="font-display font-bold text-primary mb-6 text-xl">Contact</h3>
               <div className="flex items-center text-primary mb-4">
                 <Mail className="h-5 w-5 mr-3" />
-                <span className="font-body">hello@nosh-nutrition.com</span>
+                <span className="font-body">hello@NoSh-nutrition.com</span>
               </div>
             </div>
             
