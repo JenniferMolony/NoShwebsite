@@ -1,56 +1,61 @@
 import React from 'react';
 import { GraduationCap, Heart, Globe, MapPin } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
 
 const About: React.FC = () => {
+  const { theme } = useTheme();
+  
   return (
-    <div className="py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className={theme === 'light' ? 'bg-white' : 'bg-background'}>
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-navy mb-6">About NoSh</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Meet Jenni and learn about the mission behind straight, honest nutrition communication
-          </p>
-        </div>
+        <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
+          <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
+              <span className="text-primary font-display font-bold block">About NoSh</span>
+              <span className="text-secondary font-bold font-body block mt-2">Meet Jenni and learn about the mission behind straight, honest nutrition communication</span>
+            </h1>
+          </div>
+        </section>
 
         {/* Main Content */}
-        <div className="space-y-16">
+        <div className="space-y-24">
           {/* About Jenni */}
-          <section className="bg-white border border-gray-200 rounded-2xl shadow-lg p-10">
-            <div className="grid md:grid-cols-3 gap-8 items-start">
+          <section className="bg-white border-none shadow-none p-12">
+            <div className="grid md:grid-cols-3 gap-12 items-start">
               <div className="md:col-span-1">
-                <div className="bg-gradient-to-br from-orange-100 to-pink-100 w-56 h-56 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">Photo of Jenni</span>
+                <div className="bg-white w-56 h-56 mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-primary text-sm font-body">Photo of Jenni</span>
                 </div>
               </div>
               
               <div className="md:col-span-2">
-                <h2 className="text-3xl font-bold text-navy mb-6">Meet Jenni</h2>
-                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                <h2 className="text-4xl font-display font-bold text-primary mb-8">Meet Jenni</h2>
+                <p className="text-xl text-primary mb-8 leading-relaxed font-body">
                   I'm a public health nurse with over 20 years of experience helping people make 
                   sense of nutrition information. After completing my MSc in Food, Nutrition & 
                   Health at University College Dublin (First Class Honours), I realized how much 
                   confusion exists around even basic food choices.
                 </p>
-                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                <p className="text-xl text-primary mb-12 leading-relaxed font-body">
                   NoSh was born from countless conversations with patients, friends, and family 
                   who felt overwhelmed by conflicting nutrition advice. My goal is simple: 
                   make evidence-based nutrition accessible, practical, and guilt-free.
                 </p>
                 
                 {/* Credentials */}
-                <div className="space-y-4">
-                  <div className="flex items-center text-gray-700">
-                    <GraduationCap className="h-6 w-6 text-peach mr-4" />
-                    <span className="text-lg">MSc Food, Nutrition & Health (First Class Hons) - UCD</span>
+                <div className="space-y-6">
+                  <div className="flex items-center text-primary">
+                    <GraduationCap className="h-6 w-6 text-primary mr-4" />
+                    <span className="text-xl font-body">MSc Food, Nutrition & Health (First Class Hons) - UCD</span>
                   </div>
-                  <div className="flex items-center text-gray-700">
-                    <Heart className="h-6 w-6 text-green-600 mr-4" />
-                    <span className="text-lg">Public Health Nurse - Trinity College Dublin</span>
+                  <div className="flex items-center text-primary">
+                    <Heart className="h-6 w-6 text-primary mr-4" />
+                    <span className="text-xl font-body">Public Health Nurse - Trinity College Dublin</span>
                   </div>
-                  <div className="flex items-center text-gray-700">
-                    <Globe className="h-6 w-6 text-blue-600 mr-4" />
-                    <span className="text-lg">20+ years in community health</span>
+                  <div className="flex items-center text-primary">
+                    <Globe className="h-6 w-6 text-primary mr-4" />
+                    <span className="text-xl font-body">20+ years in community health</span>
                   </div>
                 </div>
               </div>
@@ -58,20 +63,20 @@ const About: React.FC = () => {
           </section>
 
           {/* Why NoSh */}
-          <section className="bg-gradient-to-r from-gray-50 to-orange-50 rounded-2xl p-10">
-            <h2 className="text-3xl font-bold text-navy mb-8">Why NoSh?</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+          <section className="bg-white p-12">
+            <h2 className="text-4xl font-display font-bold text-primary mb-12">Why NoSh?</h2>
+            <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-bold text-navy mb-4">The Name</h3>
-                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                <h3 className="text-2xl font-display font-bold text-primary mb-6">The Name</h3>
+                <p className="text-xl text-primary mb-8 leading-relaxed font-body">
                   "NoSh" means no nonsense. No guilt. No confusion. Just straight, 
                   honest information about food that empowers you to make decisions 
                   that work for your life.
                 </p>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-navy mb-4">The Approach</h3>
-                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                <h3 className="text-2xl font-display font-bold text-primary mb-6">The Approach</h3>
+                <p className="text-xl text-primary mb-8 leading-relaxed font-body">
                   I believe nutrition should be inclusive and non-judgmental. Food is 
                   about nourishment, culture, pleasure, and practicality. My job is to 
                   give you the facts so you can make choices that feel right for you.
@@ -79,8 +84,8 @@ const About: React.FC = () => {
               </div>
             </div>
             
-            <div className="mt-10 p-8 bg-white rounded-2xl border-l-4 border-peach shadow-md">
-              <p className="text-lg text-charcoal font-medium italic">
+            <div className="mt-12 p-8 bg-white border-none shadow-none">
+              <p className="text-xl text-primary font-body italic">
                 "Nutrition that empowers, not confuses. Information that serves real 
                 people living real lives."
               </p>
@@ -89,36 +94,36 @@ const About: React.FC = () => {
 
           {/* Mission & Values */}
           <section>
-            <h2 className="text-3xl font-bold text-navy mb-10 text-center">Mission & Values</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white border border-gray-200 rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+            <h2 className="text-4xl font-display font-bold text-primary mb-16 text-center">Mission & Values</h2>
+            <div className="grid md:grid-cols-3 gap-12">
+              <div className="bg-white border-none shadow-none p-12 text-center">
+                <div className="w-16 h-16 bg-white text-primary flex items-center justify-center mb-8 mx-auto">
                   <Heart className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-4">Evidence-Based</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-2xl font-display font-bold text-primary mb-6">Evidence-Based</h3>
+                <p className="text-primary leading-relaxed font-body">
                   Every piece of advice is grounded in current research and 
                   real-world application.
                 </p>
               </div>
               
-              <div className="bg-white border border-gray-200 rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+              <div className="bg-white border-none shadow-none p-12 text-center">
+                <div className="w-16 h-16 bg-white text-primary flex items-center justify-center mb-8 mx-auto">
                   <Globe className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-4">Accessible</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-2xl font-display font-bold text-primary mb-6">Accessible</h3>
+                <p className="text-primary leading-relaxed font-body">
                   Complex nutrition science translated into practical, 
                   understandable guidance.
                 </p>
               </div>
               
-              <div className="bg-white border border-gray-200 rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-orange-100 text-peach rounded-2xl flex items-center justify-center mb-6 mx-auto">
+              <div className="bg-white border-none shadow-none p-12 text-center">
+                <div className="w-16 h-16 bg-white text-primary flex items-center justify-center mb-8 mx-auto">
                   <GraduationCap className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-4">Non-Judgmental</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-2xl font-display font-bold text-primary mb-6">Non-Judgmental</h3>
+                <p className="text-primary leading-relaxed font-body">
                   Food choices are personal. My role is to inform, 
                   not to dictate or judge.
                 </p>
@@ -127,36 +132,43 @@ const About: React.FC = () => {
           </section>
 
           {/* Future Plans */}
-          <section className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-10">
-            <h2 className="text-3xl font-bold text-navy mb-6">Looking Ahead</h2>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              In 2026, I'll be extending NoSh's mission to Spain, opening a consultorio 
-              in Zamora to serve the local community with bilingual nutrition support. 
-              The same evidence-based, non-judgmental approach, adapted for local food 
-              culture and needs.
-            </p>
-            <div className="flex items-center text-charcoal">
-              <MapPin className="h-6 w-6 mr-3 text-peach" />
-              <span className="text-lg font-medium">Zamora, Spain - Opening 2026</span>
+          <section>
+            <img 
+              src="/zamora.jpg" 
+              alt="Historic town of Zamora, Spain with traditional architecture and river reflections" 
+              className="w-full h-auto"
+            />
+            <div className="bg-white p-12">
+            <div className="flex items-center text-primary">
+                <MapPin className="h-6 w-6 mr-3 text-primary" />
+                <span className="text-lg font-body">Zamora, Spain - Opening 2026</span>
+              </div>
+              <h2 className="text-4xl font-display font-bold text-primary mb-2">Looking Ahead</h2>
+              <p className="text-xl text-primary mb-12 leading-relaxed font-body">
+                In 2026, I'll be extending NoSh's mission to Spain, opening a consultorio 
+                in Zamora to serve the local community with bilingual nutrition support. 
+                The same evidence-based, non-judgmental approach, adapted for local food 
+                culture and needs.
+              </p>
             </div>
           </section>
 
           {/* Professional Services */}
           <section className="text-center">
-            <h2 className="text-3xl font-bold text-navy mb-6">Professional Services</h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-4xl font-display font-bold text-primary mb-8">Professional Services</h2>
+            <p className="text-xl text-primary mb-12 max-w-3xl mx-auto leading-relaxed font-body">
               NoSh also serves as a portfolio for health communication and nutrition 
               consultation work. If you're looking for evidence-based nutrition content, 
               professional writing, or consultation services, I'd love to hear from you.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <span className="px-6 py-3 bg-blue-100 text-blue-700 rounded-full font-medium">
+            <div className="flex flex-wrap justify-center gap-6">
+              <span className="px-8 py-4 bg-white text-primary font-body font-semibold border-b border-primary">
                 Health Communication
               </span>
-              <span className="px-6 py-3 bg-green-100 text-green-700 rounded-full font-medium">
+              <span className="px-8 py-4 bg-white text-primary font-body font-semibold border-b border-primary">
                 Nutrition Writing
               </span>
-              <span className="px-6 py-3 bg-orange-100 text-peach rounded-full font-medium">
+              <span className="px-8 py-4 bg-white text-primary font-body font-semibold border-b border-primary">
                 Professional Consultation
               </span>
             </div>

@@ -8,6 +8,7 @@ export interface Article {
   publishDate: string;
   readTime: string;
   featured?: boolean;
+  heroImage?: string;
 }
 
 export const articles: Article[] = [
@@ -20,6 +21,7 @@ export const articles: Article[] = [
     publishDate: '2024-12-15',
     readTime: '8 min read',
     featured: true,
+    heroImage: '/chocolate.jpg',
     content: `# Chocolate: The Real Story Behind Your Favorite Treat
 
 Walk down any supermarket aisle and you'll see chocolate marketed as everything from a superfood to a guilt-inducing treat. The reality? It's neither. Let's look at what chocolate actually does for your body, based on the evidence we have.
@@ -77,6 +79,7 @@ Dark chocolate with higher cocoa content offers more potential health compounds,
     category: 'mini-nugget',
     publishDate: '2024-12-10',
     readTime: '3 min read',
+    heroImage: '/leitchin.jpg',
     content: `# Mini Nugget: What is Lecithin?
 
 If you read ingredient lists (and you should), you've probably seen "lecithin" or "soy lecithin" on everything from chocolate to bread. Here's the straight story.
@@ -89,10 +92,10 @@ Lecithin is a natural substance found in egg yolks, soybeans, and sunflower seed
 
 Food manufacturers use lecithin because it:
 
-- **Keeps things smooth**: Prevents chocolate from separating
-- **Improves texture**: Makes baked goods more tender
-- **Extends shelf life**: Helps prevent staleness
-- **Reduces ingredients needed**: Less butter or oil required in some products
+Keeps things smooth: Prevents chocolate from separating
+Improves texture: Makes baked goods more tender
+Extends shelf life: Helps prevent staleness
+Reduces ingredients needed: Less butter or oil required in some products
 
 ## Is It Safe?
 
@@ -114,6 +117,7 @@ When you see it on labels, think of it as the ingredient that keeps your chocola
     category: 'mini-nugget',
     publishDate: '2024-12-08',
     readTime: '4 min read',
+    heroImage: '/granola.jpg',
     content: `# Mini Nugget: Is Granola Actually Healthy?
 
 Granola sits in the health food aisle looking virtuous, but let's check the facts.

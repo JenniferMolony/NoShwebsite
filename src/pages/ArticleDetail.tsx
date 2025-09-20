@@ -2,10 +2,12 @@ import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowLeft, Clock, Calendar } from 'lucide-react';
 import { articles } from '../data/articles';
+import { useTheme } from '../contexts/ThemeContext';
 
 const ArticleDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = articles.find(a => a.slug === slug);
+  const { theme } = useTheme();
 
   if (!article) {
     return <Navigate to="/articles" replace />;
@@ -17,99 +19,118 @@ const ArticleDetail: React.FC = () => {
       .split('\n\n')
       .map((paragraph, index) => {
         if (paragraph.startsWith('# ')) {
-          return <h1 key={index} className="text-3xl font-bold text-gray-900 mb-6">{paragraph.slice(2)}</h1>;
+          return <h1 key={index} className="text-4xl font-display font-bold text-primary mb-8 mt-12">{paragraph.slice(2)}</h1>;
         }
         if (paragraph.startsWith('## ')) {
-          return <h2 key={index} className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{paragraph.slice(3)}</h2>;
+          return <h2 key={index} className="text-3xl font-display font-bold text-primary mb-6 mt-10">{paragraph.slice(3)}</h2>;
         }
         if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
-          return <p key={index} className="font-semibold text-gray-900 mb-4">{paragraph.slice(2, -2)}</p>;
+          return <p key={index} className="font-nav font-semibold text-primary mb-6 text-xl">{paragraph.slice(2, -2)}</p>;
         }
         if (paragraph.startsWith('- ')) {
           const items = paragraph.split('\n').filter(line => line.startsWith('- '));
           return (
-            <ul key={index} className="list-disc pl-6 mb-4 space-y-1">
-              {items.map((item, i) => (
-                <li key={i} className="text-gray-700">
-                  {item.slice(2).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}
-                </li>
-              ))}
+            <ul key={index} className="list-disc pl-6 mb-6 space-y-2">
+              {items.map((item, i) => {
+                const formatted = item.slice(2).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                return (
+                  <li key={i} className="text-primary font-body text-xl leading-relaxed" dangerouslySetInnerHTML={{ __html: formatted }} />
+                );
+              })}
             </ul>
           );
         }
         if (paragraph.includes('**')) {
           const formatted = paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
           return (
-            <p key={index} className="text-gray-700 mb-4 leading-relaxed" dangerouslySetInnerHTML={{ __html: formatted }} />
+            <p key={index} className="text-primary mb-6 leading-relaxed font-body text-xl" dangerouslySetInnerHTML={{ __html: formatted }} />
           );
         }
-        return <p key={index} className="text-gray-700 mb-4 leading-relaxed">{paragraph}</p>;
+        return <p key={index} className="text-primary mb-6 leading-relaxed font-body text-xl">{paragraph}</p>;
       });
   };
 
   return (
-    <div className="py-12">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className={theme === 'light' ? 'bg-white' : 'bg-background'}>
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Back Button */}
         <Link
           to="/articles"
-          className="inline-flex items-center text-peach hover:text-peach-dark mb-10 font-semibold transition-colors duration-200"
+          className="inline-flex items-center text-primary hover:text-primary/80 mb-12 font-nav font-semibold transition-colors duration-300 text-xl border-b border-primary hover:border-primary/80 pb-1"
         >
-          <ArrowLeft className="h-4 w-4 mr-2" />
+          <ArrowLeft className="h-4 w-4 mr-3" />
           Back to Articles
         </Link>
 
         {/* Article Header */}
-        <header className="mb-12">
-          <div className="flex items-center gap-4 mb-6">
-            <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-              article.category === 'article'
-                ? 'bg-blue-100 text-blue-700'
-                : 'bg-green-100 text-green-700'
-            }`}>
-              {article.category === 'article' ? 'In-Depth Article' : 'Mini Nugget'}
-            </span>
-            {article.featured && (
-              <span className="px-3 py-1 rounded-full text-sm font-medium bg-orange-100 text-peach">
-                Featured
+        <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
+          <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
+            <div className="flex items-center gap-6 mb-8">
+              <span className={`px-4 py-2 text-sm font-nav font-semibold border-b-2 ${
+                article.category === 'article'
+                  ? 'text-primary border-primary'
+                  : 'text-primary border-primary'
+              }`}>
+                {article.category === 'article' ? 'In-Depth Article' : 'Mini Nugget'}
               </span>
-            )}
-          </div>
-          
-          <h1 className="text-5xl font-bold text-navy mb-6 leading-tight">
-            {article.title}
-          </h1>
-          
-          <div className="flex items-center text-gray-600 space-x-4">
-            <div className="flex items-center">
-              <Clock className="h-4 w-4 mr-1" />
-              <span className="text-sm">{article.readTime}</span>
+              {article.featured && (
+                <span className="px-4 py-2 text-sm font-nav font-semibold text-primary border-b-2 border-primary">
+                  Featured
+                </span>
+              )}
             </div>
-            <div className="flex items-center">
-              <Calendar className="h-4 w-4 mr-1" />
-              <span className="text-sm">
-                {new Date(article.publishDate).toLocaleDateString('en-GB', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
+            
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
+              <span className="text-primary font-display font-bold block">{article.title}</span>
+              <span className="text-secondary font-bold font-body block mt-2">
+                <div className="flex items-center text-secondary space-x-6 font-body">
+                  <div className="flex items-center">
+                    <Clock className="h-4 w-4 mr-2" />
+                    <span className="text-sm">{article.readTime}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span className="text-sm">
+                      {new Date(article.publishDate).toLocaleDateString('en-GB', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      })}
+                    </span>
+                  </div>
+                </div>
               </span>
-            </div>
+            </h1>
           </div>
-        </header>
+        </section>
+
+        {/* Hero Image */}
+        {article.heroImage && (
+          <div className="mb-0">
+            <img 
+              src={article.heroImage} 
+              alt={article.title}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        )}
 
         {/* Article Content */}
-        <article className="prose prose-xl max-w-none">
-          <div className="bg-white text-gray-700 leading-relaxed">
-            {formatContent(article.content)}
+        <div className="w-full bg-white">
+          <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
+            <article className="max-w-none">
+              <div className="text-primary leading-relaxed font-body">
+                {formatContent(article.content)}
+              </div>
+            </article>
           </div>
-        </article>
+        </div>
 
         {/* Article Footer */}
-        <footer className="mt-16 pt-10 border-t border-gray-200">
-          <div className="bg-gradient-to-r from-gray-50 to-orange-50 rounded-2xl p-8">
-            <h3 className="text-xl font-bold text-navy mb-3">About NoSh</h3>
-            <p className="text-gray-600">
+        <footer className="mt-24 pt-12 border-t border-secondary/30">
+          <div className="bg-white p-12">
+            <h3 className="text-2xl font-display font-bold text-primary mb-6">About NoSh</h3>
+            <p className="text-primary font-body">
               Straight, honest writing about food. Evidence-based nutrition information 
               to help you make informed decisions about what you eat.
             </p>
@@ -117,9 +138,9 @@ const ArticleDetail: React.FC = () => {
         </footer>
 
         {/* Navigation to other articles */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-navy mb-8">More Articles</h3>
-          <div className="grid md:grid-cols-2 gap-8">
+        <div className="mt-24">
+          <h3 className="text-4xl font-display font-bold text-primary mb-12">More Articles</h3>
+          <div className="grid md:grid-cols-2 gap-12">
             {articles
               .filter(a => a.slug !== article.slug)
               .slice(0, 2)
@@ -127,17 +148,30 @@ const ArticleDetail: React.FC = () => {
                 <Link
                   key={otherArticle.id}
                   to={`/articles/${otherArticle.slug}`}
-                  className="block bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  className="block bg-white border-none shadow-none hover:bg-secondary/20 transition-colors duration-300"
                 >
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium mb-3 inline-block ${
-                    otherArticle.category === 'article'
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'bg-green-100 text-green-700'
-                  }`}>
-                    {otherArticle.category === 'article' ? 'Article' : 'Mini Nugget'}
-                  </span>
-                  <h4 className="font-bold text-navy mb-3 text-lg">{otherArticle.title}</h4>
-                  <p className="text-gray-600">{otherArticle.excerpt.slice(0, 120)}...</p>
+                  {/* Hero Image */}
+                  {otherArticle.heroImage && (
+                    <div className="w-full">
+                      <img 
+                        src={otherArticle.heroImage} 
+                        alt={otherArticle.title}
+                        className="w-full h-48 object-cover"
+                      />
+                    </div>
+                  )}
+                  
+                  <div className="p-12">
+                    <span className={`px-4 py-2 text-sm font-nav font-semibold border-b-2 mb-6 inline-block ${
+                      otherArticle.category === 'article'
+                        ? 'text-primary border-primary'
+                        : 'text-primary border-primary'
+                    }`}>
+                      {otherArticle.category === 'article' ? 'Article' : 'Mini Nugget'}
+                    </span>
+                    <h4 className="font-display font-bold text-primary mb-6 text-2xl">{otherArticle.title}</h4>
+                    <p className="text-primary font-body">{otherArticle.excerpt.slice(0, 120)}...</p>
+                  </div>
                 </Link>
               ))}
           </div>
