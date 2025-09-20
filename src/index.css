@@ -54,4 +54,43 @@
     font-family: 'Inter', system-ui, sans-serif;
     font-weight: 700;
   }
+
+  /* Simple cross-hatch patterns */
+  .crosshatch-border-bottom {
+    position: relative;
+  }
+
+  .crosshatch-border-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        #b64646,
+        #b64646 2px,
+        transparent 2px,
+        transparent 6px
+      );
+    opacity: 0.6;
+  }
+
+  .crosshatch-separator {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        #b64646,
+        #b64646 1px,
+        transparent 1px,
+        transparent 3px
+      );
+    opacity: 0.6;
+    margin: 0 0.75rem;
+  }
 }

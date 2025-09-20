@@ -50,30 +50,30 @@ const Articles: React.FC = () => {
           <div className="flex flex-wrap gap-4">
             <button
               onClick={() => setSelectedCategory('all')}
-              className={`px-6 py-3 text-xl font-nav font-semibold transition-colors duration-200 border-b-2 ${
+              className={`px-6 py-3 text-xl font-nav font-semibold transition-colors duration-200 ${
                 selectedCategory === 'all'
-                  ? 'text-primary border-primary'
-                  : 'text-primary/60 border-transparent hover:text-primary hover:border-primary/60'
+                  ? 'text-primary crosshatch-border-bottom'
+                  : 'text-primary/60 hover:text-primary'
               }`}
             >
               All Articles
             </button>
             <button
               onClick={() => setSelectedCategory('article')}
-              className={`px-6 py-3 text-xl font-nav font-semibold transition-colors duration-200 border-b-2 ${
+              className={`px-6 py-3 text-xl font-nav font-semibold transition-colors duration-200 ${
                 selectedCategory === 'article'
-                  ? 'text-primary border-primary'
-                  : 'text-primary/60 border-transparent hover:text-primary hover:border-primary/60'
+                  ? 'text-primary crosshatch-border-bottom'
+                  : 'text-primary/60 hover:text-primary'
               }`}
             >
               In-Depth Articles
             </button>
             <button
               onClick={() => setSelectedCategory('mini-nugget')}
-              className={`px-6 py-3 text-xl font-nav font-semibold transition-colors duration-200 border-b-2 ${
+              className={`px-6 py-3 text-xl font-nav font-semibold transition-colors duration-200 ${
                 selectedCategory === 'mini-nugget'
-                  ? 'text-primary border-primary'
-                  : 'text-primary/60 border-transparent hover:text-primary hover:border-primary/60'
+                  ? 'text-primary crosshatch-border-bottom'
+                  : 'text-primary/60 hover:text-primary'
               }`}
             >
               Mini Nuggets
@@ -128,7 +128,7 @@ const Articles: React.FC = () => {
                     <div className="flex items-center text-sm text-primary font-body">
                       <Clock className="h-4 w-4 mr-2" />
                       <span>{article.readTime}</span>
-                      <span className="mx-3">•</span>
+                      <span className="crosshatch-separator"></span>
                       <span>{new Date(article.publishDate).toLocaleDateString('en-GB', { 
                         year: 'numeric', 
                         month: 'long', 
@@ -138,7 +138,7 @@ const Articles: React.FC = () => {
                     
                     <Link
                       to={`/articles/${article.slug}`}
-                      className="inline-flex items-center text-primary hover:text-primary/80 font-nav font-semibold transition-colors duration-300 text-xl border-b border-primary hover:border-primary/80 pb-1"
+                      className="inline-flex items-center text-primary hover:text-primary/80 font-nav font-semibold transition-colors duration-300 text-xl crosshatch-border-bottom pb-1"
                     >
                       Read the full article
                       <ArrowRight className="ml-3 h-4 w-4" />

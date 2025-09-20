@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, Clock, Calendar } from 'lucide-react';
+import { ArrowLeft, Clock } from 'lucide-react';
 import { articles } from '../data/articles';
 import { useTheme } from '../contexts/ThemeContext';
 import Tag from '../components/Tag';
@@ -57,7 +57,7 @@ const ArticleDetail: React.FC = () => {
         {/* Back Button */}
         <Link
           to="/articles"
-          className="inline-flex items-center text-primary hover:text-primary/80 mb-6 font-nav font-semibold transition-colors duration-300 text-xl border-b border-primary hover:border-primary/80 pb-1"
+          className="inline-flex items-center text-primary hover:text-primary/80 mb-6 font-nav font-semibold transition-colors duration-300 text-xl crosshatch-border-bottom pb-1"
         >
           <ArrowLeft className="h-4 w-4 mr-3" />
           Back to Articles
@@ -78,21 +78,15 @@ const ArticleDetail: React.FC = () => {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
               <span className="text-primary font-display font-bold block">{article.title}</span>
               <span className="text-secondary font-bold font-body block mt-2">
-                <div className="flex items-center text-secondary space-x-6 font-body">
-                  <div className="flex items-center">
-                    <Clock className="h-4 w-4 mr-2" />
-                    <span className="text-sm">{article.readTime}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span className="text-sm">
-                      {new Date(article.publishDate).toLocaleDateString('en-GB', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                      })}
-                    </span>
-                  </div>
+                <div className="flex items-center text-sm text-primary font-body leading-relaxed">
+                  <Clock className="h-4 w-4 mr-2" />
+                  <span>{article.readTime}</span>
+                  <span className="crosshatch-separator"></span>
+                  <span>{new Date(article.publishDate).toLocaleDateString('en-GB', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}</span>
                 </div>
               </span>
             </h1>
@@ -122,9 +116,9 @@ const ArticleDetail: React.FC = () => {
         </div>
 
         {/* Article Footer */}
-        <footer className="mt-24 pt-12 border-t border-secondary/30">
-          <div className="bg-white p-12">
-            <h3 className="text-2xl font-display font-bold text-primary mb-6">About NoSh</h3>
+        <footer className="mt-24 pt-12">
+          <div className="bg-white p-12 crosshatch-border-bottom">
+            <h3 className="text-2xl font-display font-bold text-primary mb-6">About NoSh**</h3>
             <p className="text-primary font-body">
               Straight, honest writing about food. Evidence-based nutrition information 
               to help you make informed decisions about what you eat.

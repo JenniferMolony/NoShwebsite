@@ -47,7 +47,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   to={item.href}
                   className={`px-3 py-2 text-sm font-nav font-bold transition-colors duration-300 ${
                     isActive(item.href)
-                      ? 'text-primary border-b-2 border-primary'
+                      ? 'text-primary crosshatch-border-bottom'
                       : 'text-primary hover:text-primary/80'
                   }`}
                 >
@@ -161,11 +161,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
           </div>
           
-          <div className="border-t border-secondary/30 mt-16 pt-8 text-center">
-            <p className="text-primary font-body">
-              © 2025 NoSh Nutrition. All rights reserved.
-            </p>
-          </div>
         </div>
       </footer>
     </div>

@@ -67,7 +67,7 @@ const Home: React.FC = () => {
                 </p>
                 <Link
                   to={`/articles/${featuredArticle.slug}`}
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-nav font-semibold transition-colors duration-300 text-xl border-b border-primary hover:border-primary/80 pb-1"
+                  className="inline-flex items-center text-primary hover:text-primary/80 font-nav font-semibold transition-colors duration-300 text-xl crosshatch-border-bottom pb-1"
                 >
                   Read the full article
                   <ArrowRight className="ml-3 h-4 w-4" />
@@ -82,7 +82,7 @@ const Home: React.FC = () => {
       <section className={`py-24 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
         <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-display font-bold text-primary mb-6">Explore NoSh</h2>
+            <h2 className="text-4xl font-display font-bold text-primary mb-6">Explore NoSh**</h2>
             <p className="text-xl text-primary font-body">Discover evidence-based nutrition insights</p>
           </div>
           
@@ -99,7 +99,7 @@ const Home: React.FC = () => {
               <p className="text-primary mb-8 leading-relaxed font-body">
                 In-depth analysis of everyday foods and nutrition topics
               </p>
-              <span className="inline-flex items-center text-primary font-nav font-semibold text-xl border-b border-primary group-hover:border-primary/80 transition-colors duration-300 pb-1">
+              <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
                 Browse articles
                 <ArrowRight className="ml-3 h-4 w-4" />
               </span>
@@ -115,9 +115,9 @@ const Home: React.FC = () => {
               </div>
               <h3 className="text-2xl font-display font-bold text-primary mb-4">About</h3>
               <p className="text-primary mb-8 leading-relaxed font-body">
-                Learn about Jenni's background and the NoSh mission
+                Learn about Jenni's background and the NoSh** mission
               </p>
-              <span className="inline-flex items-center text-primary font-nav font-semibold text-xl border-b border-primary group-hover:border-primary/80 transition-colors duration-300 pb-1">
+              <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
                 Meet Jenni
                 <ArrowRight className="ml-3 h-4 w-4" />
               </span>
@@ -135,7 +135,7 @@ const Home: React.FC = () => {
               <p className="text-primary mb-8 leading-relaxed font-body">
                 Get in touch for questions or collaboration opportunities
               </p>
-              <span className="inline-flex items-center text-primary font-nav font-semibold text-xl border-b border-primary group-hover:border-primary/80 transition-colors duration-300 pb-1">
+              <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
                 Get in touch
                 <ArrowRight className="ml-3 h-4 w-4" />
               </span>

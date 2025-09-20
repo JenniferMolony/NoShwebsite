@@ -2,7 +2,7 @@
 
 ## Overview
 
-The NoSh website now supports two themes:
+The NoSh** website now supports two themes:
 - **Default Theme**: The original pink/peach background (`#f7e6e6`)
 - **Light Theme**: Clean white background (`#ffffff`)
 

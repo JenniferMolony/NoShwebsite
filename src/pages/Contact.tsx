@@ -80,12 +80,12 @@ const Contact: React.FC = () => {
             <div className="mt-12 bg-white border-none shadow-none p-12">
               <h3 className="font-display font-bold text-primary mb-8 text-2xl">What I Can Help With</h3>
               <ul className="space-y-4 text-primary font-body">
-                <li>• Nutrition questions and guidance</li>
-                <li>• Professional health communication</li>
-                <li>• Content writing and consultation</li>
-                <li>• Speaking engagements</li>
-                <li>• Media inquiries</li>
-                <li>• Collaboration opportunities</li>
+                <li><span className="crosshatch-separator"></span>Nutrition questions and guidance</li>
+                <li><span className="crosshatch-separator"></span>Professional health communication</li>
+                <li><span className="crosshatch-separator"></span>Content writing and consultation</li>
+                <li><span className="crosshatch-separator"></span>Speaking engagements</li>
+                <li><span className="crosshatch-separator"></span>Media inquiries</li>
+                <li><span className="crosshatch-separator"></span>Collaboration opportunities</li>
               </ul>
             </div>
           </div>

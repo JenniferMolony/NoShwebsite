@@ -12,7 +12,7 @@ const About: React.FC = () => {
         <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
-              <span className="text-primary font-display font-bold block">About NoSh</span>
+              <span className="text-primary font-display font-bold block">About NoSh**</span>
               <span className="text-secondary font-bold font-body block mt-2">Meet Jenni and learn about the mission behind straight, honest nutrition communication</span>
             </h1>
           </div>
@@ -38,7 +38,7 @@ const About: React.FC = () => {
                   confusion exists around even basic food choices.
                 </p>
                 <p className="text-xl text-primary mb-12 leading-relaxed font-body">
-                  NoSh was born from countless conversations with patients, friends, and family 
+                  NoSh** was born from countless conversations with patients, friends, and family 
                   who felt overwhelmed by conflicting nutrition advice. My goal is simple: 
                   make evidence-based nutrition accessible, practical, and guilt-free.
                 </p>
@@ -64,7 +64,7 @@ const About: React.FC = () => {
 
           {/* Why NoSh */}
           <section className="bg-white p-12">
-            <h2 className="text-4xl font-display font-bold text-primary mb-12">Why NoSh?</h2>
+            <h2 className="text-4xl font-display font-bold text-primary mb-12">Why NoSh**?</h2>
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-2xl font-display font-bold text-primary mb-6">The Name</h3>
@@ -157,18 +157,18 @@ const About: React.FC = () => {
           <section className="text-center">
             <h2 className="text-4xl font-display font-bold text-primary mb-8">Professional Services</h2>
             <p className="text-xl text-primary mb-12 max-w-3xl mx-auto leading-relaxed font-body">
-              NoSh also serves as a portfolio for health communication and nutrition 
+              NoSh** also serves as a portfolio for health communication and nutrition 
               consultation work. If you're looking for evidence-based nutrition content, 
               professional writing, or consultation services, I'd love to hear from you.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <span className="px-8 py-4 bg-white text-primary font-body font-semibold border-b border-primary">
+              <span className="px-8 py-4 bg-white text-primary font-body font-semibold crosshatch-border-bottom">
                 Health Communication
               </span>
-              <span className="px-8 py-4 bg-white text-primary font-body font-semibold border-b border-primary">
+              <span className="px-8 py-4 bg-white text-primary font-body font-semibold crosshatch-border-bottom">
                 Nutrition Writing
               </span>
-              <span className="px-8 py-4 bg-white text-primary font-body font-semibold border-b border-primary">
+              <span className="px-8 py-4 bg-white text-primary font-body font-semibold crosshatch-border-bottom">
                 Professional Consultation
               </span>
             </div>
