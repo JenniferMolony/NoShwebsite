@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Clock, ArrowRight, Search } from 'lucide-react';
 import { articles } from '../data/articles';
 import { useTheme } from '../contexts/ThemeContext';
+import Tag from '../components/Tag';
 
 const Articles: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -104,18 +105,12 @@ const Articles: React.FC = () => {
                 )}
                 
                 <div className="p-12">
-                  <div className="flex items-center gap-6 mb-8">
-                    <span className={`px-4 py-2 text-sm font-nav font-semibold border-b-2 ${
-                      article.category === 'article'
-                        ? 'text-primary border-primary'
-                        : 'text-primary border-primary'
-                    }`}>
+                  <div className="flex items-center gap-3 mb-8">
+                    <Tag variant="category">
                       {article.category === 'article' ? 'In-Depth Article' : 'Mini Nugget'}
-                    </span>
+                    </Tag>
                     {article.featured && (
-                      <span className="px-4 py-2 text-sm font-nav font-semibold text-primary border-b-2 border-primary">
-                        Featured
-                      </span>
+                      <Tag variant="featured">Featured</Tag>
                     )}
                   </div>
                   

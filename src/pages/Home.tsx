@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Book, Award, Heart } from 'lucide-react';
 import { articles } from '../data/articles';
 import { useTheme } from '../contexts/ThemeContext';
+import Tag from '../components/Tag';
 
 const Home: React.FC = () => {
   const featuredArticle = articles.find(article => article.featured);
@@ -20,8 +21,9 @@ const Home: React.FC = () => {
             </h1>
           </div>
         </section>
+      </div>
 
-      {/* Large Image Section */}
+      {/* Large Image Section - Full Width */}
       <section className="w-full">
         <img 
           src="/jamie-street-tb5A-QTI6xg-unsplash.jpg" 
@@ -29,6 +31,8 @@ const Home: React.FC = () => {
           className="w-full h-auto object-cover"
         />
       </section>
+
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 
       {/* Featured Article */}
       {featuredArticle && (
@@ -53,7 +57,7 @@ const Home: React.FC = () => {
               
               <div className="py-12 px-8 sm:px-12">
                 <div className="mb-8">
-                  <span className="text-sm text-primary font-body font-semibold tracking-wide uppercase">Featured Article</span>
+                  <Tag variant="featured">Featured Article</Tag>
                 </div>
                 <h3 className="text-3xl font-display font-bold text-primary mb-8 leading-relaxed">
                   {featuredArticle.title}

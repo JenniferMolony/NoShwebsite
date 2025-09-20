@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowLeft, Clock, Calendar } from 'lucide-react';
 import { articles } from '../data/articles';
 import { useTheme } from '../contexts/ThemeContext';
+import Tag from '../components/Tag';
 
 const ArticleDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -56,27 +57,21 @@ const ArticleDetail: React.FC = () => {
         {/* Back Button */}
         <Link
           to="/articles"
-          className="inline-flex items-center text-primary hover:text-primary/80 mb-12 font-nav font-semibold transition-colors duration-300 text-xl border-b border-primary hover:border-primary/80 pb-1"
+          className="inline-flex items-center text-primary hover:text-primary/80 mb-6 font-nav font-semibold transition-colors duration-300 text-xl border-b border-primary hover:border-primary/80 pb-1"
         >
           <ArrowLeft className="h-4 w-4 mr-3" />
           Back to Articles
         </Link>
 
         {/* Article Header */}
-        <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
+        <section className="pt-8 pb-8 sm:pt-8 sm:pb-10 lg:pt-12 lg:pb-12">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
-            <div className="flex items-center gap-6 mb-8">
-              <span className={`px-4 py-2 text-sm font-nav font-semibold border-b-2 ${
-                article.category === 'article'
-                  ? 'text-primary border-primary'
-                  : 'text-primary border-primary'
-              }`}>
+            <div className="flex items-center gap-3 mb-8">
+              <Tag variant="category">
                 {article.category === 'article' ? 'In-Depth Article' : 'Mini Nugget'}
-              </span>
+              </Tag>
               {article.featured && (
-                <span className="px-4 py-2 text-sm font-nav font-semibold text-primary border-b-2 border-primary">
-                  Featured
-                </span>
+                <Tag variant="featured">Featured</Tag>
               )}
             </div>
             
@@ -162,13 +157,11 @@ const ArticleDetail: React.FC = () => {
                   )}
                   
                   <div className="p-12">
-                    <span className={`px-4 py-2 text-sm font-nav font-semibold border-b-2 mb-6 inline-block ${
-                      otherArticle.category === 'article'
-                        ? 'text-primary border-primary'
-                        : 'text-primary border-primary'
-                    }`}>
-                      {otherArticle.category === 'article' ? 'Article' : 'Mini Nugget'}
-                    </span>
+                    <div className="mb-6">
+                      <Tag variant="category">
+                        {otherArticle.category === 'article' ? 'Article' : 'Mini Nugget'}
+                      </Tag>
+                    </div>
                     <h4 className="font-display font-bold text-primary mb-6 text-2xl">{otherArticle.title}</h4>
                     <p className="text-primary font-body">{otherArticle.excerpt.slice(0, 120)}...</p>
                   </div>
