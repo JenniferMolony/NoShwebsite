@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Book, Award, Heart } from 'lucide-react';
+import { ArrowRight, Book, Award, Heart, Mail } from 'lucide-react';
 import { articles } from '../data/articles';
 import { useTheme } from '../contexts/ThemeContext';
 import Tag from '../components/Tag';
@@ -123,13 +123,31 @@ const Home: React.FC = () => {
               </span>
             </Link>
 
+            {/* Consultations */}
+            <Link
+              to="/consultations"
+              className="text-center group"
+            >
+              <div className="mb-8">
+                <Heart className="h-12 w-12 text-primary mx-auto group-hover:text-primary/80 transition-colors duration-300" />
+              </div>
+              <h3 className="text-2xl font-display font-bold text-primary mb-4">Consultations</h3>
+              <p className="text-primary mb-8 leading-relaxed font-body">
+                Personalized nutrition guidance tailored to your real life
+              </p>
+              <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
+                Book consultation
+                <ArrowRight className="ml-3 h-4 w-4" />
+              </span>
+            </Link>
+
             {/* Contact */}
             <Link
               to="/contact"
               className="text-center group"
             >
               <div className="mb-8">
-                <Heart className="h-12 w-12 text-primary mx-auto group-hover:text-primary/80 transition-colors duration-300" />
+                <Mail className="h-12 w-12 text-primary mx-auto group-hover:text-primary/80 transition-colors duration-300" />
               </div>
               <h3 className="text-2xl font-display font-bold text-primary mb-4">Contact</h3>
               <p className="text-primary mb-8 leading-relaxed font-body">
