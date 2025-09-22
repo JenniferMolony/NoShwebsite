@@ -37,11 +37,44 @@ const About: React.FC = () => {
                   Health at University College Dublin (First Class Honours), I realized how much 
                   confusion exists around even basic food choices.
                 </p>
+                
+                {/* Professional Experience Highlight */}
+                <div className="mb-8 p-6 bg-primary/5 rounded-lg">
+                  <h4 className="font-display font-bold text-primary mb-4 text-xl">Professional Experience</h4>
+                  <ul className="space-y-2 text-primary font-body">
+                    <li className="flex items-center">
+                      <span className="crosshatch-separator mr-3"></span>
+                      20+ years public health nursing experience
+                    </li>
+                    <li className="flex items-center">
+                      <span className="crosshatch-separator mr-3"></span>
+                      MSc Food, Nutrition & Health specialization
+                    </li>
+                    <li className="flex items-center">
+                      <span className="crosshatch-separator mr-3"></span>
+                      Community-based nutrition program expertise
+                    </li>
+                    <li className="flex items-center">
+                      <span className="crosshatch-separator mr-3"></span>
+                      International development project experience
+                    </li>
+                  </ul>
+                </div>
+                
                 <p className="text-xl text-primary mb-12 leading-relaxed font-body">
                   NoSh** was born from countless conversations with patients, friends, and family 
                   who felt overwhelmed by conflicting nutrition advice. My goal is simple: 
                   make evidence-based nutrition accessible, practical, and guilt-free.
                 </p>
+                
+                {/* Enhanced Mission Statement */}
+                <div className="p-6 bg-white border-l-4 border-primary">
+                  <p className="text-xl text-primary font-body italic">
+                    "My approach combines clinical expertise with real-world practicality. Whether working 
+                    with individuals or organizations, I believe in honest, evidence-based guidance that 
+                    actually works in everyday life."
+                  </p>
+                </div>
                 
                 {/* Credentials */}
                 <div className="space-y-6">
@@ -86,8 +119,7 @@ const About: React.FC = () => {
             
             <div className="mt-12 p-8 bg-white border-none shadow-none">
               <p className="text-xl text-primary font-body italic">
-                "Nutrition that empowers, not confuses. Information that serves real 
-                people living real lives."
+                "Warning: It might not be the answer you wanted — but it'll be honest. That's NoSh**"
               </p>
             </div>
           </section>

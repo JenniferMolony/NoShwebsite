@@ -40,6 +40,44 @@ const Contact: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-16 max-w-5xl mx-auto">
           {/* Contact Information */}
           <div>
+            {/* Service Categories */}
+            <div className="bg-white p-12 mb-8 rounded-lg shadow-lg">
+              <h2 className="text-4xl font-display font-bold text-primary mb-8">How I Can Help</h2>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <span className="crosshatch-separator mr-4 mt-2"></span>
+                  <div>
+                    <h3 className="font-display font-bold text-primary text-xl mb-2">Consultation Booking</h3>
+                    <p className="text-primary font-body">Individual nutrition consultations - <a href="/consultations" className="text-primary hover:text-primary/80 underline">visit our Consultations page</a></p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <span className="crosshatch-separator mr-4 mt-2"></span>
+                  <div>
+                    <h3 className="font-display font-bold text-primary text-xl mb-2">Collaboration Inquiries</h3>
+                    <p className="text-primary font-body">NGOs and organizations seeking nutrition program support</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <span className="crosshatch-separator mr-4 mt-2"></span>
+                  <div>
+                    <h3 className="font-display font-bold text-primary text-xl mb-2">Speaking Engagements</h3>
+                    <p className="text-primary font-body">Available for nutrition education talks and presentations</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <span className="crosshatch-separator mr-4 mt-2"></span>
+                  <div>
+                    <h3 className="font-display font-bold text-primary text-xl mb-2">Media Inquiries</h3>
+                    <p className="text-primary font-body">Professional commentary on nutrition topics</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <div className="bg-white p-12 space-y-12">
               <h2 className="text-4xl font-display font-bold text-primary">Contact Information</h2>
               
@@ -52,6 +90,15 @@ const Contact: React.FC = () => {
                     <p className="text-primary mt-2 font-body">
                       I typically respond within 24-48 hours
                     </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Phone className="h-6 w-6 text-primary mt-1 mr-4" />
+                  <div>
+                    <p className="font-display font-bold text-primary text-xl">Phone</p>
+                    <p className="text-primary text-xl font-body">Spain: 664 016 423</p>
+                    <p className="text-primary text-xl font-body">International: +353 85 789 9427</p>
                   </div>
                 </div>
                 
@@ -78,14 +125,14 @@ const Contact: React.FC = () => {
 
             {/* Services */}
             <div className="mt-12 bg-white border-none shadow-none p-12">
-              <h3 className="font-display font-bold text-primary mb-8 text-2xl">What I Can Help With</h3>
+              <h3 className="font-display font-bold text-primary mb-8 text-2xl">Professional Focus Areas</h3>
               <ul className="space-y-4 text-primary font-body">
-                <li><span className="crosshatch-separator"></span>Nutrition questions and guidance</li>
+                <li><span className="crosshatch-separator"></span>Evidence-based nutrition consultation</li>
+                <li><span className="crosshatch-separator"></span>Community nutrition program development</li>
                 <li><span className="crosshatch-separator"></span>Professional health communication</li>
-                <li><span className="crosshatch-separator"></span>Content writing and consultation</li>
-                <li><span className="crosshatch-separator"></span>Speaking engagements</li>
-                <li><span className="crosshatch-separator"></span>Media inquiries</li>
-                <li><span className="crosshatch-separator"></span>Collaboration opportunities</li>
+                <li><span className="crosshatch-separator"></span>Nutrition education and training</li>
+                <li><span className="crosshatch-separator"></span>Grant writing and program evaluation</li>
+                <li><span className="crosshatch-separator"></span>International development nutrition projects</li>
               </ul>
             </div>
           </div>

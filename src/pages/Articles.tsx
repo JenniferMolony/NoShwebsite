@@ -25,11 +25,17 @@ const Articles: React.FC = () => {
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
               <span className="text-primary font-display font-bold block">Articles</span>
-              <span className="text-secondary font-bold font-body block mt-2">Evidence-based insights to help you make sense of nutrition in the real world</span>
+              <span className="text-secondary font-bold font-body block mt-2">Going back to nutrition fundamentals through practical, evidence-based guidance on everyday grocery choices</span>
             </h1>
           </div>
         </section>
 
+        {/* Mission Statement */}
+        <div className="mb-12 text-center">
+          <p className="text-xl text-primary font-body italic max-w-4xl mx-auto leading-relaxed">
+            "Going back to nutrition fundamentals through practical, evidence-based guidance on everyday grocery choices"
+          </p>
+        </div>
         {/* Search and Filter */}
         <div className="mb-16 space-y-6">
           {/* Search */}
@@ -66,7 +72,7 @@ const Articles: React.FC = () => {
                   : 'text-primary/60 hover:text-primary'
               }`}
             >
-              In-Depth Articles
+              Back to Basics - Deep Dives
             </button>
             <button
               onClick={() => setSelectedCategory('mini-nugget')}
@@ -76,7 +82,7 @@ const Articles: React.FC = () => {
                   : 'text-primary/60 hover:text-primary'
               }`}
             >
-              Mini Nuggets
+              NOSH Nuggets
             </button>
           </div>
         </div>
@@ -107,7 +113,7 @@ const Articles: React.FC = () => {
                 <div className="p-12">
                   <div className="flex items-center gap-3 mb-8">
                     <Tag variant="category">
-                      {article.category === 'article' ? 'In-Depth Article' : 'Mini Nugget'}
+                      {article.category === 'article' ? 'Back to Basics - Deep Dive' : 'NOSH Nugget'}
                     </Tag>
                     {article.featured && (
                       <Tag variant="featured">Featured</Tag>
