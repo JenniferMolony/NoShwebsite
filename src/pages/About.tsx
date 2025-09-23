@@ -34,8 +34,8 @@ const About: React.FC = () => {
                 <p className="text-xl text-primary mb-8 leading-relaxed font-body">
                   I'm a public health nurse with over 20 years of experience helping people make 
                   sense of nutrition information. After completing my MSc in Food, Nutrition & 
-                  Health at University College Dublin (First Class Honours), I realized how much 
-                  confusion exists around even basic food choices.
+                  Health at University College Dublin (First Class Honours), I founded NoSh** to 
+                  provide simple, evidence-based food and nutrition guidance.
                 </p>
                 
                 {/* Professional Experience Highlight */}
@@ -44,15 +44,15 @@ const About: React.FC = () => {
                   <ul className="space-y-2 text-primary font-body">
                     <li className="flex items-center">
                       <span className="crosshatch-separator mr-3"></span>
-                      20+ years public health nursing experience
+                      Public Health Nurse (20+ years)
                     </li>
                     <li className="flex items-center">
                       <span className="crosshatch-separator mr-3"></span>
-                      MSc Food, Nutrition & Health specialization
+                      MSc in Food, Nutrition & Health
                     </li>
                     <li className="flex items-center">
                       <span className="crosshatch-separator mr-3"></span>
-                      Community-based nutrition program expertise
+                      Founder of NoSh** brand
                     </li>
                     <li className="flex items-center">
                       <span className="crosshatch-separator mr-3"></span>

@@ -17,8 +17,31 @@ const Home: React.FC = () => {
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
               <span className="text-primary font-display font-bold block">NoSh**</span>
-              <span className="text-secondary font-bold font-body block mt-2">Straight, honest writing about nutrition.</span>
+              <span className="text-secondary font-bold font-body block mt-2">Straight, honest guidance about food & nutrition.</span>
             </h1>
+            
+            {/* New subheading */}
+            <p className="text-xl text-primary font-body mb-12 max-w-4xl leading-relaxed">
+              Evidence-based writing, personal consultations, and professional partnerships that make sense in real life.
+            </p>
+            
+            {/* Above-the-fold buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 mb-16">
+              <Link
+                to="/consultations"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-nav font-semibold hover:bg-primary/80 transition-colors duration-200 text-xl"
+              >
+                Book a Consultation
+                <ArrowRight className="ml-3 h-5 w-5" />
+              </Link>
+              <Link
+                to="/articles"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-nav font-semibold hover:bg-primary hover:text-white transition-colors duration-200 text-xl"
+              >
+                Read the Latest Guide
+                <Book className="ml-3 h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </section>
       </div>
@@ -82,48 +105,12 @@ const Home: React.FC = () => {
       <section className={`py-24 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
         <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-display font-bold text-primary mb-6">Explore NoSh**</h2>
-            <p className="text-xl text-primary font-body">Discover evidence-based nutrition insights</p>
+            <h2 className="text-4xl font-display font-bold text-primary mb-6">Quick Access</h2>
+            <p className="text-xl text-primary font-body">Three ways to get the guidance you need</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
-            {/* Articles */}
-            <Link
-              to="/articles"
-              className="text-center group"
-            >
-              <div className="mb-8">
-                <Book className="h-12 w-12 text-primary mx-auto group-hover:text-primary/80 transition-colors duration-300" />
-              </div>
-              <h3 className="text-2xl font-display font-bold text-primary mb-4">Articles</h3>
-              <p className="text-primary mb-8 leading-relaxed font-body">
-                In-depth analysis of everyday foods and nutrition topics
-              </p>
-              <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
-                Browse articles
-                <ArrowRight className="ml-3 h-4 w-4" />
-              </span>
-            </Link>
-
-            {/* About */}
-            <Link
-              to="/about"
-              className="text-center group"
-            >
-              <div className="mb-8">
-                <Award className="h-12 w-12 text-primary mx-auto group-hover:text-primary/80 transition-colors duration-300" />
-              </div>
-              <h3 className="text-2xl font-display font-bold text-primary mb-4">About</h3>
-              <p className="text-primary mb-8 leading-relaxed font-body">
-                Learn about Jenni's background and the NoSh** mission
-              </p>
-              <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
-                Meet Jenni
-                <ArrowRight className="ml-3 h-4 w-4" />
-              </span>
-            </Link>
-
-            {/* Consultations */}
+            {/* 1:1 Nutrition Support */}
             <Link
               to="/consultations"
               className="text-center group"
@@ -131,9 +118,9 @@ const Home: React.FC = () => {
               <div className="mb-8">
                 <Heart className="h-12 w-12 text-primary mx-auto group-hover:text-primary/80 transition-colors duration-300" />
               </div>
-              <h3 className="text-2xl font-display font-bold text-primary mb-4">Consultations</h3>
+              <h3 className="text-2xl font-display font-bold text-primary mb-4">1:1 Nutrition Support</h3>
               <p className="text-primary mb-8 leading-relaxed font-body">
-                Personalized nutrition guidance tailored to your real life
+                Personal consultations tailored to your real life and goals
               </p>
               <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
                 Book consultation
@@ -141,20 +128,38 @@ const Home: React.FC = () => {
               </span>
             </Link>
 
-            {/* Contact */}
+            {/* Supermarket Staples */}
             <Link
-              to="/contact"
+              to="/articles"
               className="text-center group"
             >
               <div className="mb-8">
-                <Mail className="h-12 w-12 text-primary mx-auto group-hover:text-primary/80 transition-colors duration-300" />
+                <Book className="h-12 w-12 text-primary mx-auto group-hover:text-primary/80 transition-colors duration-300" />
               </div>
-              <h3 className="text-2xl font-display font-bold text-primary mb-4">Contact</h3>
+              <h3 className="text-2xl font-display font-bold text-primary mb-4">Supermarket Staples</h3>
               <p className="text-primary mb-8 leading-relaxed font-body">
-                Get in touch for questions or collaboration opportunities
+                Evidence-based guides to everyday grocery choices
               </p>
               <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
-                Get in touch
+                Browse guides
+                <ArrowRight className="ml-3 h-4 w-4" />
+              </span>
+            </Link>
+
+            {/* Honduras Project */}
+            <Link
+              to="/collaborations"
+              className="text-center group"
+            >
+              <div className="mb-8">
+                <Award className="h-12 w-12 text-primary mx-auto group-hover:text-primary/80 transition-colors duration-300" />
+              </div>
+              <h3 className="text-2xl font-display font-bold text-primary mb-4">Honduras Project</h3>
+              <p className="text-primary mb-8 leading-relaxed font-body">
+                Community nutrition program enhancement and collaboration
+              </p>
+              <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
+                View project
                 <ArrowRight className="ml-3 h-4 w-4" />
               </span>
             </Link>

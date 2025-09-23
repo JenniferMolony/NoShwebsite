@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Articles', href: '/articles' },
+    { name: 'Supermarket Staples', href: '/articles' },
     { name: 'About', href: '/about' },
     { name: 'Consultations', href: '/consultations' },
     { name: 'Collaborations', href: '/collaborations' },
@@ -109,9 +109,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Brand */}
             <div>
               <div className="text-2xl font-display font-bold text-primary mb-6">NoSh**</div>
-              <p className="text-primary mb-6 font-body text-xl">Straight, honest writing about food</p>
+              <p className="text-primary mb-6 font-body text-xl">Simple, evidence-based food and nutrition guidance</p>
               <p className="text-primary font-body">
-                Evidence-based nutrition information for everyday decisions
+                Straight, honest guidance about food & nutrition
               </p>
             </div>
             

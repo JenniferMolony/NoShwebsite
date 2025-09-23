@@ -24,18 +24,12 @@ const Articles: React.FC = () => {
         <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
-              <span className="text-primary font-display font-bold block">Articles</span>
-              <span className="text-secondary font-bold font-body block mt-2">Going back to nutrition fundamentals through practical, evidence-based guidance on everyday grocery choices</span>
+              <span className="text-primary font-display font-bold block">Supermarket Staples</span>
+              <span className="text-secondary font-bold font-body block mt-2">Evidence-based guides to help you navigate everyday grocery choices with confidence</span>
             </h1>
           </div>
         </section>
 
-        {/* Mission Statement */}
-        <div className="mb-12 text-center">
-          <p className="text-xl text-primary font-body italic max-w-4xl mx-auto leading-relaxed">
-            "Going back to nutrition fundamentals through practical, evidence-based guidance on everyday grocery choices"
-          </p>
-        </div>
         {/* Search and Filter */}
         <div className="mb-16 space-y-6">
           {/* Search */}
@@ -62,7 +56,7 @@ const Articles: React.FC = () => {
                   : 'text-primary/60 hover:text-primary'
               }`}
             >
-              All Articles
+              All Guides
             </button>
             <button
               onClick={() => setSelectedCategory('article')}
@@ -72,7 +66,7 @@ const Articles: React.FC = () => {
                   : 'text-primary/60 hover:text-primary'
               }`}
             >
-              Back to Basics - Deep Dives
+              Full Guides
             </button>
             <button
               onClick={() => setSelectedCategory('mini-nugget')}
@@ -82,7 +76,7 @@ const Articles: React.FC = () => {
                   : 'text-primary/60 hover:text-primary'
               }`}
             >
-              NOSH Nuggets
+              Mini Nuggets
             </button>
           </div>
         </div>
@@ -113,7 +107,7 @@ const Articles: React.FC = () => {
                 <div className="p-12">
                   <div className="flex items-center gap-3 mb-8">
                     <Tag variant="category">
-                      {article.category === 'article' ? 'Back to Basics - Deep Dive' : 'NOSH Nugget'}
+                      {article.category === 'article' ? 'Full Guide' : 'Mini Nugget'}
                     </Tag>
                     {article.featured && (
                       <Tag variant="featured">Featured</Tag>
@@ -160,7 +154,7 @@ const Articles: React.FC = () => {
         <div className="mt-24 bg-white p-12 text-center">
           <h3 className="text-4xl font-display font-bold text-primary mb-6">Stay Updated</h3>
           <p className="text-xl text-primary mb-8 font-body">
-            Get notified when new articles are published
+            Get notified when new guides are published
           </p>
           <p className="text-sm text-primary font-body">
             Newsletter coming soon - follow us for updates

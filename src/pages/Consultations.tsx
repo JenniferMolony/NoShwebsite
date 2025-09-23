@@ -42,7 +42,7 @@ const Consultations: React.FC = () => {
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
               <span className="text-primary font-display font-bold block">Nutrition Consultations</span>
-              <span className="text-secondary font-bold font-body block mt-2">Evidence-based guidance tailored to your real life</span>
+              <span className="text-secondary font-bold font-body block mt-2">Honest support tailored to your real life</span>
             </h1>
           </div>
         </section>
@@ -55,9 +55,9 @@ const Consultations: React.FC = () => {
               <div className="w-16 h-16 bg-primary/10 text-primary flex items-center justify-center mb-8 mx-auto rounded-full">
                 <CheckCircle className="h-8 w-8" />
               </div>
-              <h3 className="text-2xl font-display font-bold text-primary mb-6">Comprehensive Nutritional Assessment</h3>
+              <h3 className="text-2xl font-display font-bold text-primary mb-6">Nutritional Assessment</h3>
               <p className="text-primary leading-relaxed font-body">
-                Complete review of current diet, health history, and lifestyle factors to understand your unique nutritional needs.
+                Physical, emotional, and motivational review to understand your unique relationship with food and nutrition.
               </p>
             </div>
             
@@ -65,9 +65,9 @@ const Consultations: React.FC = () => {
               <div className="w-16 h-16 bg-primary/10 text-primary flex items-center justify-center mb-8 mx-auto rounded-full">
                 <CheckCircle className="h-8 w-8" />
               </div>
-              <h3 className="text-2xl font-display font-bold text-primary mb-6">Personalized, Collaborative Goal Setting</h3>
+              <h3 className="text-2xl font-display font-bold text-primary mb-6">3 Monthly Goals</h3>
               <p className="text-primary leading-relaxed font-body">
-                Working together to create realistic, achievable nutrition objectives that fit your life and preferences.
+                Non-clinical, collaborative, and realistic goals that work with your lifestyle and preferences.
               </p>
             </div>
             
@@ -75,9 +75,9 @@ const Consultations: React.FC = () => {
               <div className="w-16 h-16 bg-primary/10 text-primary flex items-center justify-center mb-8 mx-auto rounded-full">
                 <CheckCircle className="h-8 w-8" />
               </div>
-              <h3 className="text-2xl font-display font-bold text-primary mb-6">Ongoing Progress Monitoring & Support</h3>
+              <h3 className="text-2xl font-display font-bold text-primary mb-6">Ongoing Support & Progress Check-ins</h3>
               <p className="text-primary leading-relaxed font-body">
-                Continuous guidance and follow-up throughout your nutrition journey with regular check-ins and plan adjustments.
+                Regular check-ins to monitor progress, adjust goals, and provide continuous support throughout your journey.
               </p>
             </div>
           </div>
@@ -270,6 +270,15 @@ const Consultations: React.FC = () => {
         {/* Contact Information */}
         <section className="bg-white p-12 rounded-lg shadow-lg text-center">
           <h2 className="text-4xl font-display font-bold text-primary mb-12">Contact for Booking</h2>
+          
+          {/* Important Disclaimer */}
+          <div className="mb-12 p-6 bg-primary/5 rounded-lg">
+            <p className="text-primary font-body italic text-lg">
+              <strong>Important:</strong> I am not a registered clinical dietitian in Spain. 
+              My consultations focus on general nutrition guidance and lifestyle support.
+            </p>
+          </div>
+          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
               <Phone className="h-8 w-8 text-primary mb-4" />

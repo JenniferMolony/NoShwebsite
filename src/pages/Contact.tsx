@@ -47,32 +47,24 @@ const Contact: React.FC = () => {
                 <div className="flex items-start">
                   <span className="crosshatch-separator mr-4 mt-2"></span>
                   <div>
-                    <h3 className="font-display font-bold text-primary text-xl mb-2">Consultation Booking</h3>
-                    <p className="text-primary font-body">Individual nutrition consultations - <a href="/consultations" className="text-primary hover:text-primary/80 underline">visit our Consultations page</a></p>
+                    <h3 className="font-display font-bold text-primary text-xl mb-2">Consultation Request</h3>
+                    <p className="text-primary font-body">Individual nutrition consultations - <Link to="/consultations" className="text-primary hover:text-primary/80 underline">visit our Consultations page</Link></p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
                   <span className="crosshatch-separator mr-4 mt-2"></span>
                   <div>
-                    <h3 className="font-display font-bold text-primary text-xl mb-2">Collaboration Inquiries</h3>
-                    <p className="text-primary font-body">NGOs and organizations seeking nutrition program support</p>
+                    <h3 className="font-display font-bold text-primary text-xl mb-2">Collaboration Inquiry</h3>
+                    <p className="text-primary font-body">NGOs and organizations seeking nutrition program support - <Link to="/collaborations" className="text-primary hover:text-primary/80 underline">view our Collaborations page</Link></p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
                   <span className="crosshatch-separator mr-4 mt-2"></span>
                   <div>
-                    <h3 className="font-display font-bold text-primary text-xl mb-2">Speaking Engagements</h3>
-                    <p className="text-primary font-body">Available for nutrition education talks and presentations</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <span className="crosshatch-separator mr-4 mt-2"></span>
-                  <div>
-                    <h3 className="font-display font-bold text-primary text-xl mb-2">Media Inquiries</h3>
-                    <p className="text-primary font-body">Professional commentary on nutrition topics</p>
+                    <h3 className="font-display font-bold text-primary text-xl mb-2">General Questions</h3>
+                    <p className="text-primary font-body">Speaking engagements, media inquiries, or other professional questions</p>
                   </div>
                 </div>
               </div>
