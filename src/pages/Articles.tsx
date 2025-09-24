@@ -56,7 +56,7 @@ const Articles: React.FC = () => {
                   : 'text-primary/60 hover:text-primary'
               }`}
             >
-              All Guides
+              All Staples
             </button>
             <button
               onClick={() => setSelectedCategory('article')}
@@ -67,6 +67,16 @@ const Articles: React.FC = () => {
               }`}
             >
               Full Guides
+            </button>
+            <button
+              onClick={() => setSelectedCategory('mini-nugget')}
+              className={`px-6 py-3 text-xl font-nav font-semibold transition-colors duration-200 ${
+                selectedCategory === 'mini-nugget'
+                  ? 'text-primary crosshatch-border-bottom'
+                  : 'text-primary/60 hover:text-primary'
+              }`}
+            >
+              Product Reviews
             </button>
             <button
               onClick={() => setSelectedCategory('mini-nugget')}

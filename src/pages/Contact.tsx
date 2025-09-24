@@ -86,11 +86,10 @@ const Contact: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <Phone className="h-6 w-6 text-primary mt-1 mr-4" />
+                  <Mail className="h-6 w-6 text-primary mt-1 mr-4" />
                   <div>
-                    <p className="font-display font-bold text-primary text-xl">Phone</p>
-                    <p className="text-primary text-xl font-body">Spain: 664 016 423</p>
-                    <p className="text-primary text-xl font-body">International: +353 85 789 9427</p>
+                    <p className="font-display font-bold text-primary text-xl">Email</p>
+                    <p className="text-primary text-xl font-body">hello@NoSh-nutrition.com</p>
                   </div>
                 </div>
                 
