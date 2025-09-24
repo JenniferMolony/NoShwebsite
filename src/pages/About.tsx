@@ -56,7 +56,7 @@ const About: React.FC = () => {
                     </li>
                     <li className="flex items-center">
                       <span className="crosshatch-separator mr-3"></span>
-                      International development project experience
+                      Based in Zamora, Spain
                     </li>
                   </ul>
                 </div>

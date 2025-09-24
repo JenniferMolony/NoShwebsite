@@ -24,7 +24,7 @@ const Articles: React.FC = () => {
         <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
-              <span className="text-primary font-display font-bold block">Supermarket Staples</span>
+              <span className="text-primary font-display font-bold block">Nutrition Guides</span>
               <span className="text-secondary font-bold font-body block mt-2">Evidence-based guides to help you navigate everyday grocery choices with confidence</span>
             </h1>
           </div>
@@ -56,7 +56,7 @@ const Articles: React.FC = () => {
                   : 'text-primary/60 hover:text-primary'
               }`}
             >
-              All Staples
+              All Guides
             </button>
             <button
               onClick={() => setSelectedCategory('article')}
@@ -66,17 +66,7 @@ const Articles: React.FC = () => {
                   : 'text-primary/60 hover:text-primary'
               }`}
             >
-              Full Guides
-            </button>
-            <button
-              onClick={() => setSelectedCategory('mini-nugget')}
-              className={`px-6 py-3 text-xl font-nav font-semibold transition-colors duration-200 ${
-                selectedCategory === 'mini-nugget'
-                  ? 'text-primary crosshatch-border-bottom'
-                  : 'text-primary/60 hover:text-primary'
-              }`}
-            >
-              Product Reviews
+              Supermarket Staples
             </button>
             <button
               onClick={() => setSelectedCategory('mini-nugget')}
@@ -87,6 +77,16 @@ const Articles: React.FC = () => {
               }`}
             >
               Mini Nuggets
+            </button>
+            <button
+              onClick={() => setSelectedCategory('mini-nugget')}
+              className={`px-6 py-3 text-xl font-nav font-semibold transition-colors duration-200 ${
+                selectedCategory === 'mini-nugget'
+                  ? 'text-primary crosshatch-border-bottom'
+                  : 'text-primary/60 hover:text-primary'
+              }`}
+            >
+              Product Reviews
             </button>
           </div>
         </div>

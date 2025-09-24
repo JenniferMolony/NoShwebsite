@@ -14,10 +14,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Supermarket Staples', href: '/articles' },
-    { name: 'About', href: '/about' },
     { name: 'Consultations', href: '/consultations' },
+    { name: 'Nutrition Guides', href: '/articles' },
     { name: 'Collaborations', href: '/collaborations' },
+    { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -113,6 +113,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <p className="text-primary font-body">
                 One-to-one nutrition consultations and honest food writing — backed by science, based on what's practical, and built to last.
               </p>
+              
+              {/* Language Toggle Placeholder */}
+              <div className="mt-6 p-3 bg-primary/5 rounded-lg">
+                <p className="text-primary font-body text-sm italic">
+                  Spanish/English toggle coming soon
+                </p>
+              </div>
             </div>
             
             {/* Contact */}

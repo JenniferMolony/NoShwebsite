@@ -38,7 +38,7 @@ const Home: React.FC = () => {
                 to="/articles"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-nav font-semibold hover:bg-primary hover:text-white transition-colors duration-200 text-xl"
               >
-                Explore Supermarket Staples
+                Explore Nutrition Guides
                 <Book className="ml-3 h-5 w-5" />
               </Link>
             </div>
@@ -120,7 +120,7 @@ const Home: React.FC = () => {
               </div>
               <h3 className="text-2xl font-display font-bold text-primary mb-4">1:1 Nutrition Support</h3>
               <p className="text-primary mb-8 leading-relaxed font-body">
-                Personal consultations tailored to your real life and goals
+                Personalised sessions with Jenni — online or in Zamora.
               </p>
               <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
                 Book consultation
@@ -128,7 +128,7 @@ const Home: React.FC = () => {
               </span>
             </Link>
 
-            {/* Supermarket Staples */}
+            {/* Nutrition Guides */}
             <Link
               to="/articles"
               className="text-center group"
@@ -138,7 +138,7 @@ const Home: React.FC = () => {
               </div>
               <h3 className="text-2xl font-display font-bold text-primary mb-4">Supermarket Staples</h3>
               <p className="text-primary mb-8 leading-relaxed font-body">
-                Evidence-based guides to everyday grocery choices
+                Your no-nonsense guide to navigating everyday foods.
               </p>
               <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
                 Browse guides
@@ -156,7 +156,7 @@ const Home: React.FC = () => {
               </div>
               <h3 className="text-2xl font-display font-bold text-primary mb-4">Honduras Project</h3>
               <p className="text-primary mb-8 leading-relaxed font-body">
-                Community nutrition program enhancement and collaboration
+                Partnering with Child Alliance to improve school nutrition.
               </p>
               <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
                 View project

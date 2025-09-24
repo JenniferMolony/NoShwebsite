@@ -48,15 +48,15 @@ const Contact: React.FC = () => {
                   <span className="crosshatch-separator mr-4 mt-2"></span>
                   <div>
                     <h3 className="font-display font-bold text-primary text-xl mb-2">Consultation Request</h3>
-                    <p className="text-primary font-body">Individual nutrition consultations - <Link to="/consultations" className="text-primary hover:text-primary/80 underline">visit our Consultations page</Link></p>
+                    <p className="text-primary font-body">Request a consultation - <Link to="/consultations" className="text-primary hover:text-primary/80 underline">visit our Consultations page</Link></p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
                   <span className="crosshatch-separator mr-4 mt-2"></span>
                   <div>
-                    <h3 className="font-display font-bold text-primary text-xl mb-2">Collaboration Inquiry</h3>
-                    <p className="text-primary font-body">NGOs and organizations seeking nutrition program support - <Link to="/collaborations" className="text-primary hover:text-primary/80 underline">view our Collaborations page</Link></p>
+                    <h3 className="font-display font-bold text-primary text-xl mb-2">Propose a Collaboration</h3>
+                    <p className="text-primary font-body">NGOs and programs seeking nutrition support - <Link to="/collaborations" className="text-primary hover:text-primary/80 underline">view our Collaborations page</Link></p>
                   </div>
                 </div>
                 
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
                   <span className="crosshatch-separator mr-4 mt-2"></span>
                   <div>
                     <h3 className="font-display font-bold text-primary text-xl mb-2">General Questions</h3>
-                    <p className="text-primary font-body">Speaking engagements, media inquiries, or other professional questions</p>
+                    <p className="text-primary font-body">Speaking engagements, media inquiries, or other questions</p>
                   </div>
                 </div>
               </div>
