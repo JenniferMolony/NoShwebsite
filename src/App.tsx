@@ -4,8 +4,6 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Articles from './pages/Articles';
 import About from './pages/About';
-import Consultations from './pages/Consultations';
-import Collaborations from './pages/Collaborations';
 import Contact from './pages/Contact';
 import ArticleDetail from './pages/ArticleDetail';
 
@@ -19,8 +17,6 @@ function App() {
             <Route path="/articles" element={<Articles />} />
             <Route path="/articles/:slug" element={<ArticleDetail />} />
             <Route path="/about" element={<About />} />
-            <Route path="/consultations" element={<Consultations />} />
-            <Route path="/collaborations" element={<Collaborations />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </Layout>

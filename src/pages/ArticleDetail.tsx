@@ -68,7 +68,7 @@ const ArticleDetail: React.FC = () => {
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
             <div className="flex items-center gap-3 mb-8">
               <Tag variant="category">
-                {article.category === 'article' ? 'Back to Basics - Deep Dive' : 'NOSH Nugget'}
+                {article.category === 'article' ? 'In-Depth Article' : 'Mini Nugget'}
               </Tag>
               {article.featured && (
                 <Tag variant="featured">Featured</Tag>
@@ -156,7 +156,7 @@ const ArticleDetail: React.FC = () => {
                         {otherArticle.category === 'article' ? 'Article' : 'Mini Nugget'}
                       </Tag>
                     </div>
-                      {otherArticle.category === 'article' ? 'Back to Basics' : 'NOSH Nugget'}
+                    <h4 className="font-display font-bold text-primary mb-6 text-2xl">{otherArticle.title}</h4>
                     <p className="text-primary font-body">{otherArticle.excerpt.slice(0, 120)}...</p>
                   </div>
                 </Link>
