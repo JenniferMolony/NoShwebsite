@@ -99,6 +99,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
+      )}
                   Explore our latest honest guides on everyday nutrition topics.
 
       {/* Quick Links */}
