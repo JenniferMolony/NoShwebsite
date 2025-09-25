@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
                 <div className="flex items-start">
                   <span className="crosshatch-separator mr-4 mt-2"></span>
                   <div>
-                    <h3 className="font-display font-bold text-primary text-xl mb-2">Consultation Request</h3>
+                    <h3 className="font-display font-bold text-primary text-xl mb-2">Request a Consultation</h3>
                     <p className="text-primary font-body">Request a consultation - <Link to="/consultations" className="text-primary hover:text-primary/80 underline">visit our Consultations page</Link></p>
                   </div>
                 </div>
@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
                 <div className="flex items-start">
                   <span className="crosshatch-separator mr-4 mt-2"></span>
                   <div>
-                    <h3 className="font-display font-bold text-primary text-xl mb-2">Propose a Collaboration</h3>
+                    <h3 className="font-display font-bold text-primary text-xl mb-2">Collaboration Inquiry</h3>
                     <p className="text-primary font-body">NGOs and programs seeking nutrition support - <Link to="/collaborations" className="text-primary hover:text-primary/80 underline">view our Collaborations page</Link></p>
                   </div>
                 </div>

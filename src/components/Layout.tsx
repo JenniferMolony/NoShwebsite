@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Consultations', href: '/consultations' },
-    { name: 'Nutrition Guides', href: '/articles' },
+    { name: 'Supermarket Guides', href: '/articles' },
     { name: 'Collaborations', href: '/collaborations' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
@@ -144,6 +144,21 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <a href="#" className="text-primary hover:text-primary/80 transition-colors duration-300">
                   <Twitter className="h-6 w-6" />
                 </a>
+              </div>
+            </div>
+
+            {/* Theme Switcher */}
+            <div>
+              <h3 className="font-display font-bold text-primary mb-6 text-xl">Theme</h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <span className="font-body text-primary font-semibold">EN</span>
+                  <span className="text-primary/60 font-body">English</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="font-body text-primary/40">ES</span>
+                  <span className="text-primary/40 font-body italic">Español - coming soon</span>
+                </div>
               </div>
             </div>
 

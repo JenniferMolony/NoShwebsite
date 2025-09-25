@@ -13,7 +13,7 @@ const Collaborations: React.FC = () => {
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
               <span className="text-primary font-display font-bold block">Professional Collaborations</span>
-              <span className="text-secondary font-bold font-body block mt-2">Working with programs and NGOs to improve community nutrition</span>
+              <span className="text-secondary font-bold font-body block mt-2">Partnering with organizations to improve community nutrition</span>
             </h1>
           </div>
         </section>

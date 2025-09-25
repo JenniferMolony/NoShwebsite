@@ -66,7 +66,7 @@ const Articles: React.FC = () => {
                   : 'text-primary/60 hover:text-primary'
               }`}
             >
-              Supermarket Staples
+              Full Guides
             </button>
             <button
               onClick={() => setSelectedCategory('mini-nugget')}

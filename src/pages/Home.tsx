@@ -38,7 +38,7 @@ const Home: React.FC = () => {
                 to="/articles"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-nav font-semibold hover:bg-primary hover:text-white transition-colors duration-200 text-xl"
               >
-                Explore Nutrition Guides
+                Explore Supermarket Guides
                 <Book className="ml-3 h-5 w-5" />
               </Link>
             </div>
@@ -78,7 +78,7 @@ const Home: React.FC = () => {
                 </div>
               )}
               
-              <div className="py-12 px-8 sm:px-12">
+            <h2 className="text-2xl font-display font-bold text-primary mb-8 text-center">From the Supermarket Guides</h2>
                 <div className="mb-8">
                   <Tag variant="featured">Featured Article</Tag>
                 </div>
@@ -99,7 +99,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
-      )}
+                  Explore our latest honest guides on everyday nutrition topics.
 
       {/* Quick Links */}
       <section className={`py-24 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
@@ -123,12 +123,12 @@ const Home: React.FC = () => {
                 Personalised sessions with Jenni — online or in Zamora.
               </p>
               <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
-                Book consultation
+                Book Consultation
                 <ArrowRight className="ml-3 h-4 w-4" />
               </span>
             </Link>
 
-            {/* Nutrition Guides */}
+            {/* Supermarket Guides */}
             <Link
               to="/articles"
               className="text-center group"
@@ -136,12 +136,12 @@ const Home: React.FC = () => {
               <div className="mb-8">
                 <Book className="h-12 w-12 text-primary mx-auto group-hover:text-primary/80 transition-colors duration-300" />
               </div>
-              <h3 className="text-2xl font-display font-bold text-primary mb-4">Supermarket Staples</h3>
+              <h3 className="text-2xl font-display font-bold text-primary mb-4">Supermarket Guides</h3>
               <p className="text-primary mb-8 leading-relaxed font-body">
-                Your no-nonsense guide to navigating everyday foods.
+                Honest articles about what's really in your weekly shop.
               </p>
               <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
-                Browse guides
+                Browse Guides
                 <ArrowRight className="ml-3 h-4 w-4" />
               </span>
             </Link>
@@ -159,7 +159,7 @@ const Home: React.FC = () => {
                 Partnering with Child Alliance to improve school nutrition.
               </p>
               <span className="inline-flex items-center text-primary font-nav font-semibold text-xl crosshatch-border-bottom transition-colors duration-300 pb-1">
-                View project
+                View Project
                 <ArrowRight className="ml-3 h-4 w-4" />
               </span>
             </Link>

@@ -57,7 +57,7 @@ const Consultations: React.FC = () => {
               </div>
               <h3 className="text-2xl font-display font-bold text-primary mb-6">Nutritional Assessment</h3>
               <p className="text-primary leading-relaxed font-body">
-                Body, lifestyle, mindset & habits — understanding your unique relationship with food and nutrition.
+                Physical, emotional, motivational — understanding your unique relationship with food and nutrition.
               </p>
             </div>
             
@@ -67,7 +67,7 @@ const Consultations: React.FC = () => {
               </div>
               <h3 className="text-2xl font-display font-bold text-primary mb-6">3 Monthly Goals</h3>
               <p className="text-primary leading-relaxed font-body">
-                Collaboratively set, non-clinical, practical goals that work with your lifestyle and preferences.
+                Non-clinical, collaborative, realistic goals that work with your lifestyle and preferences.
               </p>
             </div>
             
@@ -75,7 +75,7 @@ const Consultations: React.FC = () => {
               <div className="w-16 h-16 bg-primary/10 text-primary flex items-center justify-center mb-8 mx-auto rounded-full">
                 <CheckCircle className="h-8 w-8" />
               </div>
-              <h3 className="text-2xl font-display font-bold text-primary mb-6">Ongoing Support & Check-ins</h3>
+              <h3 className="text-2xl font-display font-bold text-primary mb-6">Ongoing Support & Progress Check-ins</h3>
               <p className="text-primary leading-relaxed font-body">
                 Gentle accountability for progress — regular check-ins to adjust goals and provide continuous support.
               </p>
@@ -274,7 +274,7 @@ const Consultations: React.FC = () => {
           {/* Important Disclaimer */}
           <div className="mb-12 p-6 bg-primary/5 rounded-lg">
             <p className="text-primary font-body italic text-lg">
-              <strong>Important:</strong> Jenni is not a Registered Dietitian in Spain. 
+              <strong>Important:</strong> Not a registered clinical dietitian in Spain. 
               My consultations focus on general nutrition guidance and lifestyle support.
             </p>
           </div>
