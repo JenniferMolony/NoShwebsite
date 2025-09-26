@@ -97,7 +97,6 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
-          </div>
         </section>
       )}
 
