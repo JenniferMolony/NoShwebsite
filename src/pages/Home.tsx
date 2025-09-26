@@ -16,16 +16,13 @@ const Home: React.FC = () => {
         <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
-              <span className="text-primary font-display font-bold block">NoSh**</span>
-              <span className="text-secondary font-bold font-body block mt-2">Straight, honest guidance about food & nutrition.</span>
+              <span className="text-primary font-display font-bold block">Straight, honest guidance about food & nutrition.</span>
             </h1>
             
-            {/* New subheading */}
             <p className="text-xl text-primary font-body mb-12 max-w-4xl leading-relaxed">
               One-to-one nutrition consultations and honest food writing — backed by science, based on what's practical, and built to last.
             </p>
             
-            {/* Above-the-fold buttons */}
             <div className="flex flex-col sm:flex-row gap-6 mb-16">
               <Link
                 to="/consultations"
@@ -57,51 +54,8 @@ const Home: React.FC = () => {
 
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 
-      {/* Featured Article */}
-      {featuredArticle && (
+        {/* Quick Access Blocks */}
         <section className={`py-24 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
-          <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-display font-bold text-primary mb-6">Featured Article</h2>
-              <p className="text-xl text-primary font-body">Latest insights from the world of nutrition</p>
-            </div>
-            
-            <div className="bg-white border-none shadow-none max-w-3xl mx-auto">
-              {/* Hero Image */}
-              {featuredArticle.heroImage && (
-                <div className="w-full">
-                  <img 
-                    src={featuredArticle.heroImage} 
-                    alt={featuredArticle.title}
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
-              )}
-              
-            <h2 className="text-2xl font-display font-bold text-primary mb-8 text-center">From the Supermarket Guides</h2>
-                <div className="mb-8">
-                  <Tag variant="featured">Featured Article</Tag>
-                </div>
-                <h3 className="text-3xl font-display font-bold text-primary mb-8 leading-relaxed">
-                  {featuredArticle.title}
-                </h3>
-                <p className="text-xl text-primary mb-12 leading-relaxed font-body">
-                  {featuredArticle.excerpt}
-                </p>
-                <Link
-                  to={`/articles/${featuredArticle.slug}`}
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-nav font-semibold transition-colors duration-300 text-xl crosshatch-border-bottom pb-1"
-                >
-                  Read the full article
-                  <ArrowRight className="ml-3 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-        </section>
-      )}
-
-      {/* Quick Links */}
-      <section className={`py-24 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
         <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-display font-bold text-primary mb-6">Quick Access</h2>
@@ -165,6 +119,45 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+        {/* Featured Article - Moved Below Quick Access */}
+        {featuredArticle && (
+          <section className={`py-16 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
+            <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
+              <h2 className="text-3xl font-display font-bold text-primary mb-12 text-center">From the NoSh Nutrition Guides</h2>
+              
+              <div className="bg-white border border-secondary/20 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                {/* Hero Image */}
+                <div className="w-full">
+                  <img 
+                    src="https://cdn.pixabay.com/photo/2017/07/28/14/28/chocolate-2546142_960_720.jpg"
+                    alt={featuredArticle.title}
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+                
+                <div className="p-8">
+                  <div className="mb-4">
+                    <Tag variant="featured">Featured Guide</Tag>
+                  </div>
+                  <h3 className="text-2xl font-display font-bold text-primary mb-4 leading-tight">
+                    {featuredArticle.title}
+                  </h3>
+                  <p className="text-primary mb-6 font-body">
+                    Breaking down the science behind chocolate ingredients, from cocoa percentages to emulsifiers.
+                  </p>
+                  <Link
+                    to={`/articles/${featuredArticle.slug}`}
+                    className="inline-flex items-center text-primary hover:text-primary/80 font-nav font-semibold transition-colors duration-300 crosshatch-border-bottom pb-1"
+                  >
+                    Read More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
       </div>
     </div>
   );

@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
                   <span className="crosshatch-separator mr-4 mt-2"></span>
                   <div>
                     <h3 className="font-display font-bold text-primary text-xl mb-2">Request a Consultation</h3>
-                    <p className="text-primary font-body">Request a consultation - <Link to="/consultations" className="text-primary hover:text-primary/80 underline">visit our Consultations page</Link></p>
+                    <p className="text-primary font-body">One-to-one nutrition support - <Link to="/consultations" className="text-primary hover:text-primary/80 underline">visit our Consultations page</Link></p>
                   </div>
                 </div>
                 
@@ -67,6 +67,28 @@ const Contact: React.FC = () => {
                     <p className="text-primary font-body">Speaking engagements, media inquiries, or other questions</p>
                   </div>
                 </div>
+              </div>
+              
+              {/* CTA Buttons */}
+              <div className="mt-12 grid md:grid-cols-3 gap-4">
+                <Link
+                  to="/consultations"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-nav font-semibold hover:bg-primary/80 transition-colors duration-200 text-center"
+                >
+                  Request Consultation
+                </Link>
+                <Link
+                  to="/collaborations"
+                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-nav font-semibold hover:bg-primary hover:text-white transition-colors duration-200 text-center"
+                >
+                  Collaboration Inquiry
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-secondary text-primary font-nav font-semibold hover:bg-secondary hover:text-white transition-colors duration-200 text-center"
+                >
+                  General Questions
+                </Link>
               </div>
             </div>
             

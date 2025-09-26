@@ -32,9 +32,8 @@ const About: React.FC = () => {
               <div className="md:col-span-2">
                 <h2 className="text-4xl font-display font-bold text-primary mb-8">Meet Jenni</h2>
                 <p className="text-xl text-primary mb-8 leading-relaxed font-body">
-                  I'm a public health nurse with over 20 years of experience helping people make 
-                  sense of nutrition information. After completing my MSc in Food, Nutrition & 
-                  Health at University College Dublin (First Class Honours), I founded NoSh** to 
+                  Jenni Molony is a Public Health Nurse with 20+ years of experience and an MSc in Food, Nutrition & Health. 
+                  After helping countless people make sense of nutrition information, I founded NoSh** to 
                   provide simple, evidence-based food and nutrition guidance.
                 </p>
                 

@@ -149,7 +149,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* Theme Switcher */}
             <div>
-              <h3 className="font-display font-bold text-primary mb-6 text-xl">Theme</h3>
+              <h3 className="font-display font-bold text-primary mb-6 text-xl">Language</h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <span className="font-body text-primary font-semibold">EN</span>
@@ -157,7 +157,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <span className="font-body text-primary/40">ES</span>
-                  <span className="text-primary/40 font-body italic">Español - coming soon</span>
+                  <span className="text-primary/40 font-body italic">Spanish / English version coming soon</span>
                 </div>
               </div>
             </div>
