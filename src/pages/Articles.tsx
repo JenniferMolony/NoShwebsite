@@ -23,10 +23,13 @@ const Articles: React.FC = () => {
         {/* Header */}
         <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
-              <span className="text-primary font-display font-bold block">Nutrition Guides</span>
-              <span className="text-secondary font-bold font-body block mt-2">Evidence-based guides to help you navigate everyday grocery choices with confidence</span>
-            </h1>
+            <div className="text-center">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 tracking-tight leading-tight">
+                <span className="text-primary font-display font-bold block">Nutrition Guides</span>
+              </h1>
+              <p className="text-xl text-primary font-body mb-2">Helping you make sense of supermarket labels.</p>
+              <p className="text-lg text-primary font-body">One honest guide at a time.</p>
+            </div>
           </div>
         </section>
 

@@ -124,13 +124,17 @@ const Home: React.FC = () => {
         {featuredArticle && (
           <section className={`py-16 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
             <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
-              <h2 className="text-3xl font-display font-bold text-primary mb-12 text-center">From the NoSh Nutrition Guides</h2>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-display font-bold text-primary mb-4">Supermarket Guides</h2>
+                <p className="text-xl text-primary font-body mb-2">Everyday food choices, made clearer.</p>
+                <p className="text-lg text-primary font-body">Short guides. Backed by science. Built for real life.</p>
+              </div>
               
               <div className="bg-white border border-secondary/20 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                 {/* Hero Image */}
                 <div className="w-full">
                   <img 
-                    src="https://cdn.pixabay.com/photo/2017/07/28/14/28/chocolate-2546142_960_720.jpg"
+                    src="/chocolate.jpg"
                     alt={featuredArticle.title}
                     className="w-full h-48 object-cover"
                   />
@@ -148,9 +152,9 @@ const Home: React.FC = () => {
                   </p>
                   <Link
                     to={`/articles/${featuredArticle.slug}`}
-                    className="inline-flex items-center text-primary hover:text-primary/80 font-nav font-semibold transition-colors duration-300 crosshatch-border-bottom pb-1"
+                    className="inline-flex items-center text-primary hover:text-primary/80 font-nav font-semibold transition-colors duration-300 crosshatch-border-bottom pb-1 text-lg"
                   >
-                    Read More
+                    Browse All Guides
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>

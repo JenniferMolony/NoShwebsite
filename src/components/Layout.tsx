@@ -105,7 +105,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Footer */}
       <footer className={`mt-24 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
-          <div className="grid md:grid-cols-4 gap-12">
+          <div className="grid md:grid-cols-3 gap-12">
             {/* Brand */}
             <div>
               <div className="text-2xl font-display font-bold text-primary mb-6">NoSh**</div>
@@ -113,13 +113,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <p className="text-primary font-body">
                 One-to-one nutrition consultations and honest food writing — backed by science, based on what's practical, and built to last.
               </p>
-              
-              {/* Language Toggle Placeholder */}
-              <div className="mt-6 p-3 bg-primary/5 rounded-lg">
-                <p className="text-primary font-body text-sm italic">
-                  Spanish/English toggle coming soon
-                </p>
-              </div>
             </div>
             
             {/* Contact */}
@@ -131,10 +124,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </div>
             </div>
             
-            {/* Social Links */}
+            {/* Social Links & Language */}
             <div>
-              <h3 className="font-display font-bold text-primary mb-6 text-xl">Follow</h3>
-              <div className="flex space-x-6">
+              <h3 className="font-display font-bold text-primary mb-6 text-xl">Connect</h3>
+              <div className="flex space-x-6 mb-8">
                 <a href="#" className="text-primary hover:text-primary/80 transition-colors duration-300">
                   <Linkedin className="h-6 w-6" />
                 </a>
@@ -145,46 +138,33 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <Twitter className="h-6 w-6" />
                 </a>
               </div>
-            </div>
-
-            {/* Theme Switcher */}
-            <div>
-              <h3 className="font-display font-bold text-primary mb-6 text-xl">Language</h3>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <span className="font-body text-primary font-semibold">EN</span>
-                  <span className="text-primary/60 font-body">English</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="font-body text-primary/40">ES</span>
-                  <span className="text-primary/40 font-body italic">Spanish / English version coming soon</span>
-                </div>
+              
+              {/* Language Toggle */}
+              <div className="mb-8">
+                <h4 className="font-display font-bold text-primary mb-3 text-lg">Language</h4>
+                <p className="text-primary font-body">English | Spanish (coming soon)</p>
               </div>
-            </div>
-
-            {/* Theme Switcher */}
-            <div>
-              <h3 className="font-display font-bold text-primary mb-6 text-xl">Theme</h3>
+              
+              {/* Theme Switcher */}
               <button
                 onClick={toggleTheme}
-                className="flex items-center space-x-3 text-primary hover:text-primary/80 transition-colors duration-300 group"
+                className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors duration-300 group"
                 aria-label={`Switch to ${theme === 'light' ? 'default' : 'light'} theme`}
               >
                 {theme === 'light' ? (
                   <>
-                    <Moon className="h-5 w-5" />
-                    <span className="font-body">Switch to default theme</span>
+                    <Moon className="h-4 w-4" />
+                    <span className="font-body text-sm">Default theme</span>
                   </>
                 ) : (
                   <>
-                    <Sun className="h-5 w-5" />
-                    <span className="font-body">Switch to light theme</span>
+                    <Sun className="h-4 w-4" />
+                    <span className="font-body text-sm">Light theme</span>
                   </>
                 )}
               </button>
             </div>
           </div>
-          
         </div>
       </footer>
     </div>
