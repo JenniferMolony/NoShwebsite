@@ -100,7 +100,6 @@ const Home: React.FC = () => {
           </div>
         </section>
       )}
-                  Explore our latest honest guides on everyday nutrition topics.
 
       {/* Quick Links */}
       <section className={`py-24 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
