@@ -195,30 +195,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-                  <div className="mb-4">
-                    <Tag variant="featured">Featured Guide</Tag>
-                  </div>
-                  <h3 className="text-2xl font-display font-bold text-primary mb-4 leading-tight">
-                    {featuredArticle.title}
-                  </h3>
-                  <p className="text-primary mb-6 font-body">
-                    Breaking down the science behind chocolate ingredients, from cocoa percentages to emulsifiers.
-                  </p>
-                  <Link
-                    to={`/articles/${featuredArticle.slug}`}
-                    className="inline-flex items-center text-primary hover:text-primary/80 font-nav font-semibold transition-colors duration-300 crosshatch-border-bottom pb-1 text-lg"
-                  >
-                    Browse All Guides
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export default Home;
