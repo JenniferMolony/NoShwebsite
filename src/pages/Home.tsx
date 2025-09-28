@@ -33,10 +33,9 @@ const Home: React.FC = () => {
               </Link>
               <Link
                 to="/articles"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-nav font-semibold hover:bg-primary hover:text-white transition-colors duration-200 text-xl"
+                className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary font-nav font-medium hover:bg-primary hover:text-white transition-colors duration-200 text-lg"
               >
-                Explore Supermarket Guides
-                <Book className="ml-3 h-5 w-5" />
+                👉 Start with the Basics
               </Link>
             </div>
           </div>
@@ -131,16 +130,71 @@ const Home: React.FC = () => {
               </div>
               
               <div className="bg-white border border-secondary/20 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                {/* Hero Image */}
-                <div className="w-full">
-                  <img 
-                    src="/chocolate.jpg"
-                    alt={featuredArticle.title}
-                    className="w-full h-48 object-cover"
-                  />
+                <div className="grid md:grid-cols-2 gap-0">
+                  {/* Content */}
+                  <div className="p-8 flex flex-col justify-center">
+                    <div className="mb-4">
+                      <Tag variant="featured">Featured Guide</Tag>
+                    </div>
+                    <h3 className="text-2xl font-display font-bold text-primary mb-4 leading-tight">
+                      Chocolate: The Real Story Behind Your Favorite Treat
+                    </h3>
+                    <p className="text-primary mb-6 font-body leading-relaxed">
+                      Breaking down the science behind chocolate ingredients — from cocoa percentages to emulsifiers — and how to choose the best quality, affordable and healthy options for you and yours.
+                    </p>
+                    <Link
+                      to={`/articles/${featuredArticle.slug}`}
+                      className="inline-flex items-center text-primary hover:text-primary/80 font-nav font-semibold transition-colors duration-300 crosshatch-border-bottom pb-1 text-lg"
+                    >
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </div>
+                  
+                  {/* Image */}
+                  <div className="relative">
+                    <img 
+                      src="/chocolate.jpg"
+                      alt="Chocolate: The Real Story Behind Your Favorite Treat"
+                      className="w-full h-full object-cover min-h-[300px]"
+                    />
+                  </div>
                 </div>
-                
-                <div className="p-8">
+              </div>
+            </div>
+          </section>
+        )}
+        
+        {!featuredArticle && (
+          <section className={`py-16 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
+            <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-display font-bold text-primary mb-4">Supermarket Guides</h2>
+                <p className="text-xl text-primary font-body mb-2">Everyday food choices, made clearer.</p>
+                <p className="text-lg text-primary font-body">Short guides. Backed by science. Built for real life.</p>
+              </div>
+              
+              <div className="bg-white border border-secondary/20 rounded-lg p-8 text-center">
+                <p className="text-primary font-body text-lg">
+                  Explore our latest honest guides on everyday nutrition topics.
+                </p>
+                <Link
+                  to="/articles"
+                  className="inline-flex items-center text-primary hover:text-primary/80 font-nav font-semibold transition-colors duration-300 crosshatch-border-bottom pb-1 text-lg mt-4"
+                >
+                  Browse All Guides
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Home;
                   <div className="mb-4">
                     <Tag variant="featured">Featured Guide</Tag>
                   </div>
