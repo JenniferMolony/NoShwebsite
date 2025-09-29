@@ -91,10 +91,10 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Navigation Help Section */}
+        {/* Navigation Section */}
         <section className={`py-16 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
           <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-            <h2 className="text-4xl font-display font-bold text-primary mb-12">Let's get you where you need to go.</h2>
+            <h2 className="text-4xl font-display font-bold text-primary mb-12">Explore NoSh</h2>
             
             <div className="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
               <Link
@@ -120,29 +120,30 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Feature Block - Honduras Project */}
-        <section className={`py-16 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
-          <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-display font-bold text-primary mb-4">Real-World Impact</h2>
-            </div>
-            
-            <div className="bg-white p-12 rounded-lg shadow-lg text-center">
-              <h3 className="text-3xl font-display font-bold text-primary mb-6">Supporting school nutrition in Honduras</h3>
-              <p className="text-xl text-primary mb-8 max-w-3xl mx-auto leading-relaxed font-body">
-                NoSh is proud to support Child Alliance Honduras with practical help for their school snack program. Read more about our work behind the scenes.
-              </p>
-              <Link
-                to="/collaborations"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-nav font-semibold hover:bg-primary/80 transition-colors duration-200 text-xl"
-              >
-                View Project
-                <ArrowRight className="ml-3 h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </section>
       </div>
+
+      {/* Honduras Project Feature Block - Above Footer */}
+      <section className={`py-16 mt-24 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-display font-bold text-primary mb-4">Real-World Impact</h2>
+          </div>
+          
+          <div className="bg-white p-12 rounded-lg shadow-lg text-center">
+            <h3 className="text-3xl font-display font-bold text-primary mb-6">Supporting school nutrition in Honduras</h3>
+            <p className="text-xl text-primary mb-8 max-w-3xl mx-auto leading-relaxed font-body">
+              NoSh is proud to support Child Alliance Honduras with practical help for their school snack program. Discover how we're contributing behind the scenes — from afar.
+            </p>
+            <Link
+              to="/collaborations"
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-nav font-semibold hover:bg-primary/80 transition-colors duration-200 text-xl"
+            >
+              View Project
+              <ArrowRight className="ml-3 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
