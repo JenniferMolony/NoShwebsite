@@ -132,7 +132,7 @@ const Home: React.FC = () => {
           <div className="bg-white p-12 rounded-lg shadow-lg text-center">
             <h3 className="text-3xl font-display font-bold text-primary mb-6">Supporting school nutrition in Honduras</h3>
             <p className="text-xl text-primary mb-8 max-w-3xl mx-auto leading-relaxed font-body">
-              NoSh is proud to support Child Alliance Honduras with practical help for their school snack program. Discover how we're contributing behind the scenes — from afar.
+              NoSh is proud to support Child Alliance Honduras with practical help for their school snack program. Discover how we're contributing behind the scenes.
             </p>
             <Link
               to="/collaborations"
