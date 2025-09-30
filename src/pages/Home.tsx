@@ -81,7 +81,7 @@ const Home: React.FC = () => {
                 {/* Image */}
                 <div className="relative">
                   <img 
-                    src="https://images.pexels.com/photos/65882/chocolate-dark-coffee-confiserie-65882.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    src="/image.png"
                     alt="Chocolate: The Real Story Behind Your Favorite Treat"
                     className="w-full h-full object-cover min-h-[300px]"
                   />
