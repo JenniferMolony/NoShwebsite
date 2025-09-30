@@ -120,7 +120,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <h3 className="font-display font-bold text-primary mb-6 text-xl">Contact</h3>
               <div className="flex items-center text-primary mb-4">
                 <Mail className="h-5 w-5 mr-3" />
-                <span className="font-body">hello@NoSh-nutrition.com</span>
+                <span className="font-body">Jenni.NoShNutrition@outlook.com</span>
               </div>
             </div>
             

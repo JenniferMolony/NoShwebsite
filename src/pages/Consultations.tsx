@@ -274,8 +274,7 @@ const Consultations: React.FC = () => {
           {/* Important Disclaimer */}
           <div className="mb-12 p-6 bg-primary/5 rounded-lg">
             <p className="text-primary font-body italic text-lg">
-              <strong>Important:</strong> Not a registered clinical dietitian in Spain. 
-              My consultations focus on general nutrition guidance and lifestyle support.
+              <strong>Important:</strong> Not clinical dietetics. Nutrition and lifestyle guidance and support.
             </p>
           </div>
           
@@ -295,7 +294,7 @@ const Consultations: React.FC = () => {
             <div className="flex flex-col items-center">
               <Mail className="h-8 w-8 text-primary mb-4" />
               <h3 className="font-display font-bold text-primary mb-2 text-xl">Email</h3>
-              <p className="text-primary font-body text-xl">hello@NoSh-nutrition.com</p>
+              <p className="text-primary font-body text-lg">Jenni.NoShNutrition@outlook.com</p>
             </div>
           </div>
           

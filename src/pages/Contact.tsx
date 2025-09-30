@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
                   <Mail className="h-6 w-6 text-primary mt-1 mr-4" />
                   <div>
                     <p className="font-display font-bold text-primary text-xl">Email</p>
-                    <p className="text-primary text-xl font-body">hello@NoSh-nutrition.com</p>
+                    <p className="text-primary text-xl font-body">Jenni.NoShNutrition@outlook.com</p>
                     <p className="text-primary mt-2 font-body">
                       I typically respond within 24-48 hours
                     </p>
@@ -111,7 +111,7 @@ const Contact: React.FC = () => {
                   <Mail className="h-6 w-6 text-primary mt-1 mr-4" />
                   <div>
                     <p className="font-display font-bold text-primary text-xl">Email</p>
-                    <p className="text-primary text-xl font-body">hello@NoSh-nutrition.com</p>
+                    <p className="text-primary text-xl font-body">Jenni.NoShNutrition@outlook.com</p>
                   </div>
                 </div>
                 

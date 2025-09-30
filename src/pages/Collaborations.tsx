@@ -196,7 +196,7 @@ const Collaborations: React.FC = () => {
             <div className="flex flex-col items-center">
               <Mail className="h-8 w-8 text-primary mb-4" />
               <h3 className="font-display font-bold text-primary mb-2 text-xl">Email</h3>
-              <p className="text-primary font-body text-lg">hello@NoSh-nutrition.com</p>
+              <p className="text-primary font-body text-lg">Jenni.NoShNutrition@outlook.com</p>
             </div>
           </div>
           
