@@ -15,10 +15,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Consultations', href: '/consultations' },
-    { name: 'Supermarket Guides', href: '/articles' },
     { name: 'Collaborations', href: '/collaborations' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
   ];
 
   const isActive = (href: string) => {
@@ -110,9 +108,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div>
               <div className="text-2xl font-display font-bold text-primary mb-6">NoSh**</div>
               <p className="text-primary mb-6 font-body text-xl">Simple, evidence-based food and nutrition guidance</p>
-              <p className="text-primary font-body">
-                One-to-one nutrition consultations and honest food writing — backed by science, based on what's practical, and built to last.
-              </p>
             </div>
             
             {/* Contact */}
@@ -124,27 +119,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </div>
             </div>
             
-            {/* Social Links & Language */}
+            {/* Social Links */}
             <div>
               <h3 className="font-display font-bold text-primary mb-6 text-xl">Connect</h3>
               <div className="flex space-x-6 mb-8">
                 <a href="#" className="text-primary hover:text-primary/80 transition-colors duration-300">
-                  <Linkedin className="h-6 w-6" />
-                </a>
-                <a href="#" className="text-primary hover:text-primary/80 transition-colors duration-300">
                   <Instagram className="h-6 w-6" />
                 </a>
                 <a href="#" className="text-primary hover:text-primary/80 transition-colors duration-300">
-                  <Twitter className="h-6 w-6" />
+                  <Linkedin className="h-6 w-6" />
                 </a>
               </div>
-              
-              {/* Language Toggle */}
-              <div className="mb-8">
-                <h4 className="font-display font-bold text-primary mb-3 text-lg">Language</h4>
-                <p className="text-primary font-body">English | Spanish (coming soon)</p>
-              </div>
-              
+
               {/* Theme Switcher */}
               <button
                 onClick={toggleTheme}
@@ -164,6 +150,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 )}
               </button>
             </div>
+          </div>
+          
+          {/* Copyright */}
+          <div className="mt-12 pt-8 border-t border-secondary/20 text-center">
+            <p className="text-primary font-body">© 2024 NoSh**. All rights reserved.</p>
           </div>
         </div>
       </footer>
