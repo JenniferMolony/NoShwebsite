@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Mail, Linkedin, Instagram, Twitter, Sun, Moon } from 'lucide-react';
+import { Menu, X, Mail, Linkedin, Instagram, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,12 +12,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
+  const { language, setLanguage, t } = useLanguage();
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Consultations', href: '/consultations' },
-    { name: 'Collaborations', href: '/collaborations' },
-    { name: 'About', href: '/about' },
+    { name: t('nav.home'), href: '/' },
+    { name: t('nav.consultations'), href: '/consultations' },
+    { name: t('nav.collaborations'), href: '/collaborations' },
+    { name: t('nav.about'), href: '/about' },
   ];
 
   const isActive = (href: string) => {
@@ -41,6 +43,31 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-12">
+              {/* Language Toggle */}
+              <div className="flex items-center space-x-2 mr-8">
+                <button
+                  onClick={() => setLanguage('en')}
+                  className={`text-sm font-nav font-semibold transition-colors duration-300 ${
+                    language === 'en'
+                      ? 'text-primary'
+                      : 'text-primary/60 hover:text-primary'
+                  }`}
+                >
+                  EN
+                </button>
+                <span className="text-primary/40">|</span>
+                <button
+                  onClick={() => setLanguage('es')}
+                  className={`text-sm font-nav font-semibold transition-colors duration-300 ${
+                    language === 'es'
+                      ? 'text-primary'
+                      : 'text-primary/60 hover:text-primary'
+                  }`}
+                >
+                  ES
+                </button>
+              </div>
+              
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -74,6 +101,32 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="md:hidden border-t border-secondary/30">
+              {/* Mobile Language Toggle */}
+              <div className="px-2 pt-4 pb-2 border-b border-secondary/20">
+                <div className="flex items-center justify-center space-x-4">
+                  <button
+                    onClick={() => setLanguage('en')}
+                    className={`px-4 py-2 text-sm font-nav font-semibold transition-colors duration-300 ${
+                      language === 'en'
+                        ? 'text-primary bg-secondary/20'
+                        : 'text-primary/60 hover:text-primary'
+                    }`}
+                  >
+                    EN
+                  </button>
+                  <button
+                    onClick={() => setLanguage('es')}
+                    className={`px-4 py-2 text-sm font-nav font-semibold transition-colors duration-300 ${
+                      language === 'es'
+                        ? 'text-primary bg-secondary/20'
+                        : 'text-primary/60 hover:text-primary'
+                    }`}
+                  >
+                    ES
+                  </button>
+                </div>
+              </div>
+              
               <div className="px-2 pt-4 pb-6 space-y-2">
                 {navigation.map((item) => (
                   <Link
@@ -107,21 +160,30 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Brand */}
             <div>
               <div className="text-2xl font-display font-bold text-primary mb-6">NoSh**</div>
-              <p className="text-primary mb-6 font-body text-xl">Simple, evidence-based food and nutrition guidance</p>
+              <p className="text-primary mb-6 font-body text-xl">
+                {language === 'en' 
+                  ? 'Simple, evidence-based food and nutrition guidance'
+                  : 'Orientación alimentaria y nutricional simple y basada en evidencia'
+                }
+              </p>
             </div>
             
             {/* Contact */}
             <div>
-              <h3 className="font-display font-bold text-primary mb-6 text-xl">Contact</h3>
+              <h3 className="font-display font-bold text-primary mb-6 text-xl">
+                {language === 'en' ? 'Contact' : 'Contacto'}
+              </h3>
               <div className="flex items-center text-primary mb-4">
                 <Mail className="h-5 w-5 mr-3" />
-                <span className="font-body">Jenni.NoShNutrition@outlook.com</span>
+                <span className="font-body">{t('footer.contact')}</span>
               </div>
             </div>
             
             {/* Social Links */}
             <div>
-              <h3 className="font-display font-bold text-primary mb-6 text-xl">Connect</h3>
+              <h3 className="font-display font-bold text-primary mb-6 text-xl">
+                {language === 'en' ? 'Connect' : 'Conectar'}
+              </h3>
               <div className="flex space-x-6 mb-8">
                 <a href="#" className="text-primary hover:text-primary/80 transition-colors duration-300">
                   <Instagram className="h-6 w-6" />
@@ -154,7 +216,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           
           {/* Copyright */}
           <div className="mt-12 pt-8 border-t border-secondary/20 text-center">
-            <p className="text-primary font-body">© 2024 NoSh**. All rights reserved.</p>
+            <p className="text-primary font-body">{t('footer.copyright')}</p>
           </div>
         </div>
       </footer>
