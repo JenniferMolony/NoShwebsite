@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useLanguage } from '../contexts/LanguageContext';
 
 const Home: React.FC = () => {
   const { theme } = useTheme();
-  const { t } = useLanguage();
   const { t } = useLanguage();
 
   return (
