@@ -22,8 +22,6 @@ function App() {
           </Layout>
         </Router>
       </LanguageProvider>
-        </Router>
-      </LanguageProvider>
     </ThemeProvider>
   );
 }
