@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Mail, Linkedin, Instagram } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useLanguage } from '../contexts/LanguageContext';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,7 +12,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const { theme } = useTheme();
-  const { language, setLanguage, t } = useLanguage();
   const { language, setLanguage, t } = useLanguage();
 
   const navigation = [
