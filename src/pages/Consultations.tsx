@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, Video, MapPin, Phone, Mail, CircleCheck as CheckCircle } from 'lucide-react';
+import { Clock, Video, MapPin, Phone, Mail, CircleCheck as CheckCircle } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -128,7 +128,7 @@ const Consultations: React.FC = () => {
           {selectedService && (
             <div className="bg-white p-12 rounded-lg shadow-lg">
               <h3 className="text-3xl font-display font-bold text-primary mb-8">
-                {t('consultations.book.title')} {selectedService === 'online' ? t('consultations.online.title') : t('consultations.inperson.title')}
+                {t('consultations.book.title')} - {selectedService === 'online' ? t('consultations.online.title') : t('consultations.inperson.title')}
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-8">
