@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-            
+
+const Home = () => {
+  return (
+    <div>
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+        <section>
+          <div>
             <div className="flex flex-col sm:flex-row gap-6 mb-16">
               <Link
                 to="/consultations"
