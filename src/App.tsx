@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Consultations from './pages/Consultations';
 import Collaborations from './pages/Collaborations';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/consultations" element={<Consultations />} />
               <Route path="/collaborations" element={<Collaborations />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </Layout>
         </Router>
