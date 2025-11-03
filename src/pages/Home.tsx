@@ -1,26 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeContext';
-import { useLanguage } from '../contexts/LanguageContext';
-
-const Home: React.FC = () => {
-  const { theme } = useTheme();
-  const { t } = useLanguage();
-
-  return (
-    <div className={theme === 'light' ? 'bg-white' : 'bg-background'}>
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Hero Section */}
-        <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
-          <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
-              <span className="text-primary font-display font-bold block">{t('home.hero.title')}</span>
-            </h1>
-            
-            <p className="text-xl text-primary font-body mb-12 max-w-4xl leading-relaxed">
-              {t('home.hero.subtitle')}
-            </p>
             
             <div className="flex flex-col sm:flex-row gap-6 mb-16">
               <Link
