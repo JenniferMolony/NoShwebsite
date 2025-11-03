@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useLanguage } from '../contexts/LanguageContext';
 
 const Home: React.FC = () => {
   const { theme } = useTheme();
-  const { t } = useLanguage();
   const { t } = useLanguage();
 
   return (
@@ -53,6 +51,7 @@ const Home: React.FC = () => {
       </section>
 
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+
         {/* Honduras Project Feature Block */}
         <section className={`py-16 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
           <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
