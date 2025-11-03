@@ -25,7 +25,7 @@ const translations = {
     
     // Home Page
     'home.hero.title': 'Straight, honest guidance about food & nutrition.',
-    'home.hero.subtitle': 'One-to-one nutrition consultations and community nutrition support — backed by science, focused on what\'s practical, and built to last.',
+    'home.hero.subtitle': 'One-to-one nutrition consultations and community and school nutrition support — backed by science, focused on what\'s practical, and built to last.',
     'home.hero.consultation.button': 'Book a Consultation',
     'home.hero.about.button': 'About Jenni',
     'home.impact.title': 'Real-World Impact',
@@ -39,7 +39,7 @@ const translations = {
     
     // Consultations Page
     'consultations.title': 'Nutrition Consultations',
-    'consultations.subtitle': 'Honest support tailored to real life',
+    'consultations.subtitle': 'Evidence-based, personalised nutrition guidance',
     'consultations.expect.title': 'What to Expect',
     'consultations.expect.assessment.title': 'Nutritional Assessment',
     'consultations.expect.assessment.text': 'Physical, emotional, motivational — understanding your unique relationship with food and nutrition.',
@@ -53,7 +53,7 @@ const translations = {
     'consultations.online.perfect': 'Perfect for international clients',
     'consultations.inperson.title': 'In-Person Consultation',
     'consultations.inperson.text': 'Face-to-face consultation in Zamora, Spain',
-    'consultations.inperson.perfect': 'Personalized, hands-on guidance',
+    'consultations.inperson.perfect': 'Personalised, hands-on guidance',
     'consultations.form.name': 'Full Name *',
     'consultations.form.email': 'Email Address *',
     'consultations.form.phone': 'Phone Number',
@@ -65,7 +65,7 @@ const translations = {
     'consultations.options.title': 'Consultation Options',
     'consultations.initial.title': 'Initial Consultation',
     'consultations.initial.duration': '60 minutes',
-    'consultations.initial.text': 'Complete assessment and personalized plan development. We\'ll review your health history, current diet, lifestyle factors, and create a tailored nutrition strategy that works for your life.',
+    'consultations.initial.text': 'Complete assessment and personalised plan development. We\'ll review your health history, current diet, lifestyle factors, and create a tailored nutrition strategy that works for your life.',
     'consultations.followup.title': 'Follow-up Sessions',
     'consultations.followup.duration': '30 minutes',
     'consultations.followup.text': 'Progress review and plan adjustments. We\'ll assess how you\'re doing with your nutrition goals, address any challenges, and refine your approach for continued success.',
@@ -77,7 +77,7 @@ const translations = {
     
     // Collaborations Page
     'collaborations.title': 'Professional Collaborations',
-    'collaborations.subtitle': 'Partnering with organizations to improve community nutrition',
+    'collaborations.subtitle': 'Partnering with organisations to improve community and school nutrition',
     'collaborations.featured': 'Featured Collaboration',
     'collaborations.honduras.title': 'Honduras Child Alliance',
     'collaborations.honduras.subtitle': 'Porvenir After-School Snack Program - Nutritional Assessment & Strategic Enhancement',
@@ -92,19 +92,19 @@ const translations = {
     'collaborations.achievements.1': 'Developed traffic-light nutritional assessment system for clear program evaluation',
     'collaborations.achievements.2': 'Created strategic enhancement roadmap maintaining cultural appropriateness and budget constraints',
     'collaborations.achievements.3': 'Identified 50-75% improvement potential in calcium provision within existing framework',
-    'collaborations.achievements.4': 'Established sustainable menu optimization framework for long-term program success',
+    'collaborations.achievements.4': 'Established sustainable menu optimisation framework for long-term program success',
     'collaborations.approach.title': 'Professional Approach',
     'collaborations.evidence.title': 'Evidence-Based Analysis',
     'collaborations.evidence.text1': 'Every recommendation is grounded in current nutritional science and adapted to real-world constraints including budget, cultural preferences, and local food availability.',
     'collaborations.evidence.text2': 'I combine clinical expertise with practical implementation strategies to ensure sustainable program improvements.',
     'collaborations.cultural.title': 'Cultural Sensitivity',
     'collaborations.cultural.text1': 'Understanding that nutrition programs must respect local food cultures and traditions while achieving health objectives.',
-    'collaborations.cultural.text2': 'My approach emphasizes enhancement rather than replacement, working within existing frameworks to maximize impact.',
+    'collaborations.cultural.text2': 'My approach emphasises enhancement rather than replacement, working within existing frameworks to maximise impact.',
     'collaborations.services.title': 'Collaboration Services Offered',
     'collaborations.service.assessment': 'Program Nutritional Assessments',
     'collaborations.service.assessment.text': 'Comprehensive evaluation of existing nutrition programs with evidence-based recommendations for improvement.',
-    'collaborations.service.menu': 'Menu Planning & Optimization',
-    'collaborations.service.menu.text': 'Strategic menu development that maximizes nutritional value within budget and cultural constraints.',
+    'collaborations.service.menu': 'Menu Planning & Optimisation',
+    'collaborations.service.menu.text': 'Strategic menu development that maximises nutritional value within budget and cultural constraints.',
     'collaborations.service.training': 'Volunteer Training & Support',
     'collaborations.service.training.text': 'Development of training materials and support systems for volunteers implementing nutrition programs.',
     'collaborations.service.education': 'Community Nutrition Education',
@@ -114,7 +114,7 @@ const translations = {
     'collaborations.service.evaluation': 'Program Evaluation',
     'collaborations.service.evaluation.text': 'Development of assessment frameworks and evaluation systems for measuring program effectiveness.',
     'collaborations.cta.title': 'Interested in Collaborating?',
-    'collaborations.cta.text': 'Let\'s discuss how evidence-based nutrition expertise can enhance your community programs. Whether you\'re an NGO, healthcare organization, or community group, I\'m here to help create sustainable nutrition solutions.',
+    'collaborations.cta.text': 'Let\'s discuss how evidence-based nutrition expertise can enhance your community programs. Whether you\'re an NGO, healthcare organisation, or community group, I\'m here to help create sustainable nutrition solutions.',
     'collaborations.cta.quote': 'Professional collaboration inquiries welcome - let\'s create meaningful nutrition impact together',
     
     // About Page
@@ -128,7 +128,7 @@ const translations = {
     'about.experience.3': 'Founder of NoSh** brand',
     'about.experience.4': 'Based in Zamora, Spain',
     'about.mission.text': 'NoSh** was born from countless conversations with patients, friends, and family who felt overwhelmed by conflicting nutrition advice. My goal is simple: make evidence-based nutrition accessible, practical, and guilt-free.',
-    'about.quote': 'My approach combines clinical expertise with real-world practicality. Whether working with individuals or organizations, I believe in honest, evidence-based guidance that actually works in everyday life.',
+    'about.quote': 'My approach combines clinical expertise with real-world practicality. Whether working with individuals or organisations, I believe in honest, evidence-based guidance that actually works in everyday life.',
     'about.credentials.1': 'MSc Food, Nutrition & Health (First Class Hons) - UCD',
     'about.credentials.2': 'Public Health Nurse - Trinity College Dublin',
     'about.credentials.3': '20+ years in community health',
@@ -162,7 +162,7 @@ const translations = {
     
     // Home Page
     'home.hero.title': 'Orientación directa y honesta sobre alimentación y nutrición.',
-    'home.hero.subtitle': 'Consultas nutricionales individuales y apoyo nutricional comunitario — respaldado por la ciencia, enfocado en lo práctico y construido para durar.',
+    'home.hero.subtitle': 'Consultas nutricionales individuales y apoyo nutricional comunitario y escolar — respaldado por la ciencia, enfocado en lo práctico y construido para durar.',
     'home.hero.consultation.button': 'Reservar Consulta',
     'home.hero.about.button': 'Sobre Jenni',
     'home.impact.title': 'Impacto Real',
@@ -176,7 +176,7 @@ const translations = {
     
     // Consultations Page
     'consultations.title': 'Consultas Nutricionales',
-    'consultations.subtitle': 'Apoyo honesto adaptado a la vida real',
+    'consultations.subtitle': 'Orientación nutricional personalizada basada en evidencia',
     'consultations.expect.title': 'Qué Esperar',
     'consultations.expect.assessment.title': 'Evaluación Nutricional',
     'consultations.expect.assessment.text': 'Física, emocional, motivacional — entendiendo tu relación única con la comida y la nutrición.',
@@ -214,7 +214,7 @@ const translations = {
     
     // Collaborations Page
     'collaborations.title': 'Colaboraciones Profesionales',
-    'collaborations.subtitle': 'Asociándose con organizaciones para mejorar la nutrición comunitaria',
+    'collaborations.subtitle': 'Asociándose con organizaciones para mejorar la nutrición comunitaria y escolar',
     'collaborations.featured': 'Colaboración Destacada',
     'collaborations.honduras.title': 'Honduras Child Alliance',
     'collaborations.honduras.subtitle': 'Programa de Meriendas Extraescolares Porvenir - Evaluación Nutricional y Mejora Estratégica',

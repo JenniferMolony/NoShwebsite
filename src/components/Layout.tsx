@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Mail, Linkedin, Instagram, Sun, Moon } from 'lucide-react';
+import { Menu, X, Mail, Linkedin, Instagram } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface LayoutProps {
@@ -11,7 +12,8 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
+  const { language, setLanguage, t } = useLanguage();
   const { language, setLanguage, t } = useLanguage();
 
   const navigation = [
@@ -43,6 +45,31 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-12">
+              {/* Language Toggle */}
+              <div className="flex items-center space-x-2 mr-8">
+                <button
+                  onClick={() => setLanguage('en')}
+                  className={`text-sm font-nav font-semibold transition-colors duration-300 ${
+                    language === 'en'
+                      ? 'text-primary'
+                      : 'text-primary/60 hover:text-primary'
+                  }`}
+                >
+                  EN
+                </button>
+                <span className="text-primary/40">|</span>
+                <button
+                  onClick={() => setLanguage('es')}
+                  className={`text-sm font-nav font-semibold transition-colors duration-300 ${
+                    language === 'es'
+                      ? 'text-primary'
+                      : 'text-primary/60 hover:text-primary'
+                  }`}
+                >
+                  ES
+                </button>
+              </div>
+              
               {/* Language Toggle */}
               <div className="flex items-center space-x-2 mr-8">
                 <button
@@ -127,6 +154,32 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </div>
               </div>
               
+              {/* Mobile Language Toggle */}
+              <div className="px-2 pt-4 pb-2 border-b border-secondary/20">
+                <div className="flex items-center justify-center space-x-4">
+                  <button
+                    onClick={() => setLanguage('en')}
+                    className={`px-4 py-2 text-sm font-nav font-semibold transition-colors duration-300 ${
+                      language === 'en'
+                        ? 'text-primary bg-secondary/20'
+                        : 'text-primary/60 hover:text-primary'
+                    }`}
+                  >
+                    EN
+                  </button>
+                  <button
+                    onClick={() => setLanguage('es')}
+                    className={`px-4 py-2 text-sm font-nav font-semibold transition-colors duration-300 ${
+                      language === 'es'
+                        ? 'text-primary bg-secondary/20'
+                        : 'text-primary/60 hover:text-primary'
+                    }`}
+                  >
+                    ES
+                  </button>
+                </div>
+              </div>
+              
               <div className="px-2 pt-4 pb-6 space-y-2">
                 {navigation.map((item) => (
                   <Link
@@ -165,6 +218,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   ? 'Simple, evidence-based food and nutrition guidance'
                   : 'Orientación alimentaria y nutricional simple y basada en evidencia'
                 }
+                  ? 'Simple, evidence-based food and nutrition guidance'
+                  : 'Orientación alimentaria y nutricional simple y basada en evidencia'
+                }
               </p>
             </div>
             
@@ -192,25 +248,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <Linkedin className="h-6 w-6" />
                 </a>
               </div>
-
-              {/* Theme Switcher */}
-              <button
-                onClick={toggleTheme}
-                className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors duration-300 group"
-                aria-label={`Switch to ${theme === 'light' ? 'default' : 'light'} theme`}
-              >
-                {theme === 'light' ? (
-                  <>
-                    <Moon className="h-4 w-4" />
-                    <span className="font-body text-sm">Default theme</span>
-                  </>
-                ) : (
-                  <>
-                    <Sun className="h-4 w-4" />
-                    <span className="font-body text-sm">Light theme</span>
-                  </>
-                )}
-              </button>
             </div>
           </div>
           
