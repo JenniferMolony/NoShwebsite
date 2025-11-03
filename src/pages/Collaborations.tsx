@@ -1,11 +1,9 @@
 import React from 'react';
 import { Users, Target, TrendingUp, Award, Mail, Phone } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
-import { useLanguage } from '../contexts/LanguageContext';
 
 const Collaborations: React.FC = () => {
   const { theme } = useTheme();
-  const { t } = useLanguage();
 
   return (
     <div className={theme === 'light' ? 'bg-white' : 'bg-background'}>
@@ -14,8 +12,8 @@ const Collaborations: React.FC = () => {
         <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
-              <span className="text-primary font-display font-bold block">{t('collaborations.title')}</span>
-              <span className="text-secondary font-bold font-body block mt-2">{t('collaborations.subtitle')}</span>
+              <span className="text-primary font-display font-bold block">Professional Collaborations</span>
+              <span className="text-secondary font-bold font-body block mt-2">Partnering with organizations to improve community nutrition</span>
             </h1>
           </div>
         </section>
@@ -26,18 +24,20 @@ const Collaborations: React.FC = () => {
             <div className="bg-primary/5 p-12">
               <div className="flex items-center mb-6">
                 <Award className="h-8 w-8 text-primary mr-4" />
-                <span className="text-primary font-nav font-semibold text-xl">{t('collaborations.featured')}</span>
+                <span className="text-primary font-nav font-semibold text-xl">Featured Collaboration</span>
               </div>
-              <h2 className="text-4xl font-display font-bold text-primary mb-8">{t('collaborations.honduras.title')}</h2>
+              <h2 className="text-4xl font-display font-bold text-primary mb-8">Honduras Child Alliance</h2>
             </div>
             
             <div className="p-12">
               <div className="mb-12">
                 <h3 className="text-3xl font-display font-bold text-primary mb-6">
-                  {t('collaborations.honduras.subtitle')}
+                  Porvenir After-School Snack Program - Nutritional Assessment & Strategic Enhancement
                 </h3>
                 <p className="text-xl text-primary leading-relaxed font-body mb-8">
-                  {t('collaborations.honduras.description')}
+                  Comprehensive nutritional analysis and strategic recommendations for a community-based 
+                  child nutrition program in Honduras, focusing on sustainable improvements within existing 
+                  cultural and budget frameworks.
                 </p>
               </div>
 
@@ -46,9 +46,9 @@ const Collaborations: React.FC = () => {
                   <div className="w-16 h-16 bg-primary/10 text-primary flex items-center justify-center mb-6 mx-auto rounded-full">
                     <Target className="h-8 w-8" />
                   </div>
-                  <h4 className="font-display font-bold text-primary mb-4 text-xl">{t('collaborations.assessment.title')}</h4>
+                  <h4 className="font-display font-bold text-primary mb-4 text-xl">Strategic Assessment</h4>
                   <p className="text-primary font-body">
-                    {t('collaborations.assessment.text')}
+                    Developed traffic-light nutritional assessment system for program evaluation
                   </p>
                 </div>
                 
@@ -56,9 +56,9 @@ const Collaborations: React.FC = () => {
                   <div className="w-16 h-16 bg-primary/10 text-primary flex items-center justify-center mb-6 mx-auto rounded-full">
                     <TrendingUp className="h-8 w-8" />
                   </div>
-                  <h4 className="font-display font-bold text-primary mb-4 text-xl">{t('collaborations.enhancement.title')}</h4>
+                  <h4 className="font-display font-bold text-primary mb-4 text-xl">Enhancement Roadmap</h4>
                   <p className="text-primary font-body">
-                    {t('collaborations.enhancement.text')}
+                    Created strategic enhancement roadmap maintaining cultural appropriateness
                   </p>
                 </div>
                 
@@ -66,31 +66,31 @@ const Collaborations: React.FC = () => {
                   <div className="w-16 h-16 bg-primary/10 text-primary flex items-center justify-center mb-6 mx-auto rounded-full">
                     <Users className="h-8 w-8" />
                   </div>
-                  <h4 className="font-display font-bold text-primary mb-4 text-xl">{t('collaborations.impact.title')}</h4>
+                  <h4 className="font-display font-bold text-primary mb-4 text-xl">Community Impact</h4>
                   <p className="text-primary font-body">
-                    {t('collaborations.impact.text')}
+                    Identified 50-75% improvement potential in calcium provision
                   </p>
                 </div>
               </div>
 
               <div className="bg-primary/5 p-8 rounded-lg">
-                <h4 className="font-display font-bold text-primary mb-4 text-2xl">{t('collaborations.achievements.title')}</h4>
+                <h4 className="font-display font-bold text-primary mb-4 text-2xl">Key Achievements</h4>
                 <ul className="space-y-3 text-primary font-body text-lg">
                   <li className="flex items-start">
                     <span className="crosshatch-separator mr-3 mt-2"></span>
-                    {t('collaborations.achievements.1')}
+                    Developed traffic-light nutritional assessment system for clear program evaluation
                   </li>
                   <li className="flex items-start">
                     <span className="crosshatch-separator mr-3 mt-2"></span>
-                    {t('collaborations.achievements.2')}
+                    Created strategic enhancement roadmap maintaining cultural appropriateness and budget constraints
                   </li>
                   <li className="flex items-start">
                     <span className="crosshatch-separator mr-3 mt-2"></span>
-                    {t('collaborations.achievements.3')}
+                    Identified 50-75% improvement potential in calcium provision within existing framework
                   </li>
                   <li className="flex items-start">
                     <span className="crosshatch-separator mr-3 mt-2"></span>
-                    {t('collaborations.achievements.4')}
+                    Established sustainable menu optimization framework for long-term program success
                   </li>
                 </ul>
               </div>
@@ -100,25 +100,29 @@ const Collaborations: React.FC = () => {
 
         {/* Professional Approach */}
         <section className="mb-24">
-          <h2 className="text-4xl font-display font-bold text-primary mb-16 text-center">{t('collaborations.approach.title')}</h2>
+          <h2 className="text-4xl font-display font-bold text-primary mb-16 text-center">Professional Approach</h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-white p-12 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-display font-bold text-primary mb-6">{t('collaborations.evidence.title')}</h3>
+              <h3 className="text-2xl font-display font-bold text-primary mb-6">Evidence-Based Analysis</h3>
               <p className="text-primary leading-relaxed font-body mb-6">
-                {t('collaborations.evidence.text1')}
+                Every recommendation is grounded in current nutritional science and adapted to real-world 
+                constraints including budget, cultural preferences, and local food availability.
               </p>
               <p className="text-primary leading-relaxed font-body">
-                {t('collaborations.evidence.text2')}
+                I combine clinical expertise with practical implementation strategies to ensure 
+                sustainable program improvements.
               </p>
             </div>
             
             <div className="bg-white p-12 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-display font-bold text-primary mb-6">{t('collaborations.cultural.title')}</h3>
+              <h3 className="text-2xl font-display font-bold text-primary mb-6">Cultural Sensitivity</h3>
               <p className="text-primary leading-relaxed font-body mb-6">
-                {t('collaborations.cultural.text1')}
+                Understanding that nutrition programs must respect local food cultures and traditions 
+                while achieving health objectives.
               </p>
               <p className="text-primary leading-relaxed font-body">
-                {t('collaborations.cultural.text2')}
+                My approach emphasizes enhancement rather than replacement, working within existing 
+                frameworks to maximize impact.
               </p>
             </div>
           </div>
@@ -126,47 +130,47 @@ const Collaborations: React.FC = () => {
 
         {/* Services Offered */}
         <section className="mb-24">
-          <h2 className="text-4xl font-display font-bold text-primary mb-16 text-center">{t('collaborations.services.title')}</h2>
+          <h2 className="text-4xl font-display font-bold text-primary mb-16 text-center">Collaboration Services Offered</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="font-display font-bold text-primary mb-4 text-xl">{t('collaborations.service.assessment')}</h3>
+              <h3 className="font-display font-bold text-primary mb-4 text-xl">Program Nutritional Assessments</h3>
               <p className="text-primary font-body">
-                {t('collaborations.service.assessment.text')}
+                Comprehensive evaluation of existing nutrition programs with evidence-based recommendations for improvement.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="font-display font-bold text-primary mb-4 text-xl">{t('collaborations.service.menu')}</h3>
+              <h3 className="font-display font-bold text-primary mb-4 text-xl">Menu Planning & Optimization</h3>
               <p className="text-primary font-body">
-                {t('collaborations.service.menu.text')}
+                Strategic menu development that maximizes nutritional value within budget and cultural constraints.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="font-display font-bold text-primary mb-4 text-xl">{t('collaborations.service.training')}</h3>
+              <h3 className="font-display font-bold text-primary mb-4 text-xl">Volunteer Training & Support</h3>
               <p className="text-primary font-body">
-                {t('collaborations.service.training.text')}
+                Development of training materials and support systems for volunteers implementing nutrition programs.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="font-display font-bold text-primary mb-4 text-xl">{t('collaborations.service.education')}</h3>
+              <h3 className="font-display font-bold text-primary mb-4 text-xl">Community Nutrition Education</h3>
               <p className="text-primary font-body">
-                {t('collaborations.service.education.text')}
+                Creation of culturally appropriate nutrition education materials and program development.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="font-display font-bold text-primary mb-4 text-xl">{t('collaborations.service.grants')}</h3>
+              <h3 className="font-display font-bold text-primary mb-4 text-xl">Grant Writing Support</h3>
               <p className="text-primary font-body">
-                {t('collaborations.service.grants.text')}
+                Assistance with funding applications and grant writing for nutrition-focused community programs.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="font-display font-bold text-primary mb-4 text-xl">{t('collaborations.service.evaluation')}</h3>
+              <h3 className="font-display font-bold text-primary mb-4 text-xl">Program Evaluation</h3>
               <p className="text-primary font-body">
-                {t('collaborations.service.evaluation.text')}
+                Development of assessment frameworks and evaluation systems for measuring program effectiveness.
               </p>
             </div>
           </div>
@@ -174,29 +178,31 @@ const Collaborations: React.FC = () => {
 
         {/* Call to Action */}
         <section className="bg-white p-12 rounded-lg shadow-lg text-center">
-          <h2 className="text-4xl font-display font-bold text-primary mb-8">{t('collaborations.cta.title')}</h2>
+          <h2 className="text-4xl font-display font-bold text-primary mb-8">Interested in Collaborating?</h2>
           <p className="text-xl text-primary mb-12 max-w-3xl mx-auto leading-relaxed font-body">
-            {t('collaborations.cta.text')}
+            Let's discuss how evidence-based nutrition expertise can enhance your community programs. 
+            Whether you're an NGO, healthcare organization, or community group, I'm here to help 
+            create sustainable nutrition solutions.
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             <div className="flex flex-col items-center">
               <Phone className="h-8 w-8 text-primary mb-4" />
               <h3 className="font-display font-bold text-primary mb-2 text-xl">Phone</h3>
-              <p className="text-primary font-body text-lg">{t('consultations.phone.spain')}</p>
-              <p className="text-primary font-body text-lg">{t('consultations.phone.international')}</p>
+              <p className="text-primary font-body text-lg">Spain: 664 016 423</p>
+              <p className="text-primary font-body text-lg">International: +353 85 789 9427</p>
             </div>
             
             <div className="flex flex-col items-center">
               <Mail className="h-8 w-8 text-primary mb-4" />
               <h3 className="font-display font-bold text-primary mb-2 text-xl">Email</h3>
-              <p className="text-primary font-body text-lg">{t('footer.contact')}</p>
+              <p className="text-primary font-body text-lg">Jenni.NoShNutrition@outlook.com</p>
             </div>
           </div>
           
           <div className="mt-12 p-8 bg-primary/5 rounded-lg">
             <p className="text-primary font-body italic text-xl">
-              "{t('collaborations.cta.quote')}"
+              "Professional collaboration inquiries welcome - let's create meaningful nutrition impact together"
             </p>
           </div>
         </section>
