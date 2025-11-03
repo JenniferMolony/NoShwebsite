@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Home = () => {
+  const { theme } = useTheme();
+  const { t } = useLanguage();
+
   return (
     <div>
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
