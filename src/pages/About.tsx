@@ -1,11 +1,9 @@
 import React from 'react';
 import { GraduationCap, Heart, Globe, MapPin } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
-import { useLanguage } from '../contexts/LanguageContext';
 
 const About: React.FC = () => {
   const { theme } = useTheme();
-  const { t } = useLanguage();
   
   return (
     <div className={theme === 'light' ? 'bg-white' : 'bg-background'}>
@@ -14,8 +12,8 @@ const About: React.FC = () => {
         <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
-              <span className="text-primary font-display font-bold block">{t('about.title')}</span>
-              <span className="text-secondary font-bold font-body block mt-2">{t('about.subtitle')}</span>
+              <span className="text-primary font-display font-bold block">About NoSh**</span>
+              <span className="text-secondary font-bold font-body block mt-2">Meet Jenni and learn about the mission behind straight, honest nutrition communication</span>
             </h1>
           </div>
         </section>
@@ -32,42 +30,48 @@ const About: React.FC = () => {
               </div>
               
               <div className="md:col-span-2">
-                <h2 className="text-4xl font-display font-bold text-primary mb-8">{t('about.meet.title')}</h2>
+                <h2 className="text-4xl font-display font-bold text-primary mb-8">Meet Jenni</h2>
                 <p className="text-xl text-primary mb-8 leading-relaxed font-body">
-                  {t('about.meet.intro')}
+                  Jenni Molony is a Public Health Nurse with 20+ years of experience and an MSc in Food, Nutrition & Health. 
+                  After helping countless people make sense of nutrition information, I founded NoSh** to 
+                  provide simple, evidence-based food and nutrition guidance.
                 </p>
                 
                 {/* Professional Experience Highlight */}
                 <div className="mb-8 p-6 bg-primary/5 rounded-lg">
-                  <h4 className="font-display font-bold text-primary mb-4 text-xl">{t('about.experience.title')}</h4>
+                  <h4 className="font-display font-bold text-primary mb-4 text-xl">Professional Experience</h4>
                   <ul className="space-y-2 text-primary font-body">
                     <li className="flex items-center">
                       <span className="crosshatch-separator mr-3"></span>
-                      {t('about.experience.1')}
+                      Public Health Nurse (20+ years)
                     </li>
                     <li className="flex items-center">
                       <span className="crosshatch-separator mr-3"></span>
-                      {t('about.experience.2')}
+                      MSc in Food, Nutrition & Health
                     </li>
                     <li className="flex items-center">
                       <span className="crosshatch-separator mr-3"></span>
-                      {t('about.experience.3')}
+                      Founder of NoSh** brand
                     </li>
                     <li className="flex items-center">
                       <span className="crosshatch-separator mr-3"></span>
-                      {t('about.experience.4')}
+                      Based in Zamora, Spain
                     </li>
                   </ul>
                 </div>
                 
                 <p className="text-xl text-primary mb-12 leading-relaxed font-body">
-                  {t('about.mission.text')}
+                  NoSh** was born from countless conversations with patients, friends, and family 
+                  who felt overwhelmed by conflicting nutrition advice. My goal is simple: 
+                  make evidence-based nutrition accessible, practical, and guilt-free.
                 </p>
                 
                 {/* Enhanced Mission Statement */}
                 <div className="p-6 bg-white border-l-4 border-primary">
                   <p className="text-xl text-primary font-body italic">
-                    "{t('about.quote')}"
+                    "My approach combines clinical expertise with real-world practicality. Whether working 
+                    with individuals or organizations, I believe in honest, evidence-based guidance that 
+                    actually works in everyday life."
                   </p>
                 </div>
                 
@@ -75,15 +79,15 @@ const About: React.FC = () => {
                 <div className="space-y-6">
                   <div className="flex items-center text-primary">
                     <GraduationCap className="h-6 w-6 text-primary mr-4" />
-                    <span className="text-xl font-body">{t('about.credentials.1')}</span>
+                    <span className="text-xl font-body">MSc Food, Nutrition & Health (First Class Hons) - UCD</span>
                   </div>
                   <div className="flex items-center text-primary">
                     <Heart className="h-6 w-6 text-primary mr-4" />
-                    <span className="text-xl font-body">{t('about.credentials.2')}</span>
+                    <span className="text-xl font-body">Public Health Nurse - Trinity College Dublin</span>
                   </div>
                   <div className="flex items-center text-primary">
                     <Globe className="h-6 w-6 text-primary mr-4" />
-                    <span className="text-xl font-body">{t('about.credentials.3')}</span>
+                    <span className="text-xl font-body">20+ years in community health</span>
                   </div>
                 </div>
               </div>
@@ -92,40 +96,45 @@ const About: React.FC = () => {
 
           {/* Why NoSh */}
           <section className="bg-white p-12">
-            <h2 className="text-4xl font-display font-bold text-primary mb-12">{t('about.why.title')}</h2>
+            <h2 className="text-4xl font-display font-bold text-primary mb-12">Why NoSh**?</h2>
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-display font-bold text-primary mb-6">{t('about.why.name.title')}</h3>
+                <h3 className="text-2xl font-display font-bold text-primary mb-6">The Name</h3>
                 <p className="text-xl text-primary mb-8 leading-relaxed font-body">
-                  {t('about.why.name.text')}
+                  "NoSh" means no nonsense. No guilt. No confusion. Just straight, 
+                  honest information about food that empowers you to make decisions 
+                  that work for your life.
                 </p>
               </div>
               <div>
-                <h3 className="text-2xl font-display font-bold text-primary mb-6">{t('about.why.approach.title')}</h3>
+                <h3 className="text-2xl font-display font-bold text-primary mb-6">The Approach</h3>
                 <p className="text-xl text-primary mb-8 leading-relaxed font-body">
-                  {t('about.why.approach.text')}
+                  I believe nutrition should be inclusive and non-judgmental. Food is 
+                  about nourishment, culture, pleasure, and practicality. My job is to 
+                  give you the facts so you can make choices that feel right for you.
                 </p>
               </div>
             </div>
             
             <div className="mt-12 p-8 bg-white border-none shadow-none">
               <p className="text-xl text-primary font-body italic">
-                "{t('about.warning')}"
+                "Warning: It might not be the answer you wanted — but it'll be honest. That's NoSh**"
               </p>
             </div>
           </section>
 
           {/* Mission & Values */}
           <section>
-            <h2 className="text-4xl font-display font-bold text-primary mb-16 text-center">{t('about.mission.title')}</h2>
+            <h2 className="text-4xl font-display font-bold text-primary mb-16 text-center">Mission & Values</h2>
             <div className="grid md:grid-cols-3 gap-12">
               <div className="bg-white border-none shadow-none p-12 text-center">
                 <div className="w-16 h-16 bg-white text-primary flex items-center justify-center mb-8 mx-auto">
                   <Heart className="h-8 w-8" />
                 </div>
-                <h3 className="text-2xl font-display font-bold text-primary mb-6">{t('about.evidence.title')}</h3>
+                <h3 className="text-2xl font-display font-bold text-primary mb-6">Evidence-Based</h3>
                 <p className="text-primary leading-relaxed font-body">
-                  {t('about.evidence.text')}
+                  Every piece of advice is grounded in current research and 
+                  real-world application.
                 </p>
               </div>
               
@@ -133,9 +142,10 @@ const About: React.FC = () => {
                 <div className="w-16 h-16 bg-white text-primary flex items-center justify-center mb-8 mx-auto">
                   <Globe className="h-8 w-8" />
                 </div>
-                <h3 className="text-2xl font-display font-bold text-primary mb-6">{t('about.accessible.title')}</h3>
+                <h3 className="text-2xl font-display font-bold text-primary mb-6">Accessible</h3>
                 <p className="text-primary leading-relaxed font-body">
-                  {t('about.accessible.text')}
+                  Complex nutrition science translated into practical, 
+                  understandable guidance.
                 </p>
               </div>
               
@@ -143,9 +153,10 @@ const About: React.FC = () => {
                 <div className="w-16 h-16 bg-white text-primary flex items-center justify-center mb-8 mx-auto">
                   <GraduationCap className="h-8 w-8" />
                 </div>
-                <h3 className="text-2xl font-display font-bold text-primary mb-6">{t('about.nonjudgmental.title')}</h3>
+                <h3 className="text-2xl font-display font-bold text-primary mb-6">Non-Judgmental</h3>
                 <p className="text-primary leading-relaxed font-body">
-                  {t('about.nonjudgmental.text')}
+                  Food choices are personal. My role is to inform, 
+                  not to dictate or judge.
                 </p>
               </div>
             </div>
@@ -161,32 +172,35 @@ const About: React.FC = () => {
             <div className="bg-white p-12">
             <div className="flex items-center text-primary">
                 <MapPin className="h-6 w-6 mr-3 text-primary" />
-                <span className="text-lg font-body">
-                  {t('language') === 'en' ? 'Zamora, Spain - Opening 2026' : 'Zamora, España - Apertura 2026'}
-                </span>
+                <span className="text-lg font-body">Zamora, Spain - Opening 2026</span>
               </div>
-              <h2 className="text-4xl font-display font-bold text-primary mb-2">{t('about.future.title')}</h2>
+              <h2 className="text-4xl font-display font-bold text-primary mb-2">Looking Ahead</h2>
               <p className="text-xl text-primary mb-12 leading-relaxed font-body">
-                {t('about.future.text')}
+                In 2026, I'll be extending NoSh's mission to Spain, opening a consultorio 
+                in Zamora to serve the local community with bilingual nutrition support. 
+                The same evidence-based, non-judgmental approach, adapted for local food 
+                culture and needs.
               </p>
             </div>
           </section>
 
           {/* Professional Services */}
           <section className="text-center">
-            <h2 className="text-4xl font-display font-bold text-primary mb-8">{t('about.services.title')}</h2>
+            <h2 className="text-4xl font-display font-bold text-primary mb-8">Professional Services</h2>
             <p className="text-xl text-primary mb-12 max-w-3xl mx-auto leading-relaxed font-body">
-              {t('about.services.text')}
+              NoSh** also serves as a portfolio for health communication and nutrition 
+              consultation work. If you're looking for evidence-based nutrition content, 
+              professional writing, or consultation services, I'd love to hear from you.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <span className="px-8 py-4 bg-white text-primary font-body font-semibold crosshatch-border-bottom">
-                {t('about.services.communication')}
+                Health Communication
               </span>
               <span className="px-8 py-4 bg-white text-primary font-body font-semibold crosshatch-border-bottom">
-                {t('about.services.writing')}
+                Nutrition Writing
               </span>
               <span className="px-8 py-4 bg-white text-primary font-body font-semibold crosshatch-border-bottom">
-                {t('about.services.consultation')}
+                Professional Consultation
               </span>
             </div>
           </section>
