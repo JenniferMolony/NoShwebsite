@@ -24,7 +24,7 @@ const Home: React.FC = () => {
             
             <p className="text-xl text-primary font-body mb-12 max-w-4xl leading-relaxed">
               {language === 'en'
-                ? 'One-to-one nutrition consultations and community and school nutrition support — backed by science, focused on what's practical, and built to last.'
+                ? 'One-to-one nutrition consultations and community and school nutrition support — backed by science, focused on what\'s practical, and built to last.'
                 : 'Consultas de nutrición individuales y apoyo en nutrición comunitaria y escolar — basadas en evidencia, enfocadas en lo práctico y pensadas para durar.'}
             </p>
             
