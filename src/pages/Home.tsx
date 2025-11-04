@@ -22,6 +22,12 @@ const Home: React.FC = () => {
               {t('home.hero.subtitle')}
             </p>
             
+            <p className="text-xl text-primary font-body mb-12 max-w-4xl leading-relaxed">
+              {language === 'en'
+                ? 'One-to-one nutrition consultations and community and school nutrition support — backed by science, focused on what's practical, and built to last.'
+                : 'Consultas de nutrición individuales y apoyo en nutrición comunitaria y escolar — basadas en evidencia, enfocadas en lo práctico y pensadas para durar.'}
+            </p>
+            
             <div className="flex flex-col sm:flex-row gap-6 mb-16">
               <Link
                 to="/consultations"
