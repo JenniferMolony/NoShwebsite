@@ -6,7 +6,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const Home: React.FC = () => {
   const { theme } = useTheme();
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <div className={theme === 'light' ? 'bg-white' : 'bg-background'}>
