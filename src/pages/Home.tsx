@@ -48,21 +48,13 @@ const Home: React.FC = () => {
 
         {/* Hero Media */}
         <section className="w-full">
-          <figure className="hero-media">
-            <img
-              src="/images/hero-berries.jpg"
-              alt={language === 'en'
-                ? 'Fresh berries in a heart-shaped bowl'
-                : 'Frutos rojos en un cuenco con forma de corazón'}
-              style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }}
-              loading="eager"
-            />
-            <figcaption className="sr-only">
-              {language === 'en'
-                ? 'Fresh berries in a heart-shaped bowl'
-                : 'Frutos rojos en un cuenco con forma de corazón'}
-            </figcaption>
-          </figure>
+          <img
+            src="/images/hero-berries.jpg"
+            alt={language === 'en'
+              ? 'Fresh berries in a heart-shaped bowl'
+              : 'Frutos rojos en un cuenco con forma de corazón'}
+            style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }}
+          />
         </section>
       </div>
 
