@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, Video, MapPin, Phone, Mail, CircleCheck as CheckCircle } from 'lucide-react';
+// Use a stable icon name available across lucide-react versions
+import { Calendar, Clock, Video, MapPin, Phone, Mail, CheckCircle } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 

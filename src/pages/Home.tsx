@@ -6,7 +6,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const Home: React.FC = () => {
   const { theme } = useTheme();
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <div className={theme === 'light' ? 'bg-white' : 'bg-background'}>
@@ -45,16 +45,18 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
 
-      {/* Large Image Section - Full Width */}
-      <section className="w-full">
-        <img 
-          src="/jamie-street-tb5A-QTI6xg-unsplash.jpg" 
-          alt="Fresh berries in a heart-shaped bowl" 
-          className="w-full h-auto object-cover"
-        />
-      </section>
+        {/* Hero Media */}
+        <section className="w-full">
+          <img
+            src="/berries.png"
+            alt={language === 'en'
+              ? 'Fresh berries in a heart-shaped bowl'
+              : 'Frutos rojos en un cuenco con forma de corazón'}
+            style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }}
+          />
+        </section>
+      </div>
 
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 
