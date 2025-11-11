@@ -49,7 +49,7 @@ const Home: React.FC = () => {
         {/* Hero Media */}
         <section className="w-full">
           <img
-            src="/images/hero-berries.jpg"
+            src="/berries.png"
             alt={language === 'en'
               ? 'Fresh berries in a heart-shaped bowl'
               : 'Frutos rojos en un cuenco con forma de corazón'}
