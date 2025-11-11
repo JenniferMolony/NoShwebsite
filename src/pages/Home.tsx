@@ -1,12 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const Home = () => {
+const Home: React.FC = () => {
+  const { theme } = useTheme();
+  const { language, t } = useLanguage();
+
   return (
-    <div>
+    <div className={theme === 'light' ? 'bg-white' : 'bg-background'}>
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-        <section>
-          <div>
+        {/* Hero Section */}
+        <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
+          <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
+              <span className="text-primary font-display font-bold block">{t('home.hero.title')}</span>
+            </h1>
+            
+            <p className="text-xl text-primary font-body mb-12 max-w-4xl leading-relaxed">
+              {t('home.hero.subtitle')}
+            </p>
+            
+            <p className="text-xl text-primary font-body mb-12 max-w-4xl leading-relaxed">
+              {language === 'en'
+                ? 'One-to-one nutrition consultations and community and school nutrition support — backed by science, focused on what\'s practical, and built to last.'
+                : 'Consultas de nutrición individuales y apoyo en nutrición comunitaria y escolar — basadas en evidencia, enfocadas en lo práctico y pensadas para durar.'}
+            </p>
+            
             <div className="flex flex-col sm:flex-row gap-6 mb-16">
               <Link
                 to="/consultations"
@@ -24,16 +45,18 @@ const Home = () => {
             </div>
           </div>
         </section>
-      </div>
 
-      {/* Large Image Section - Full Width */}
-      <section className="w-full">
-        <img 
-          src="/jamie-street-tb5A-QTI6xg-unsplash.jpg" 
-          alt="Fresh berries in a heart-shaped bowl" 
-          className="w-full h-auto object-cover"
-        />
-      </section>
+        {/* Hero Media */}
+        <section className="w-full">
+          <img
+            src="/images/hero-berries.jpg"
+            alt={language === 'en'
+              ? 'Fresh berries in a heart-shaped bowl'
+              : 'Frutos rojos en un cuenco con forma de corazón'}
+            style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }}
+          />
+        </section>
+      </div>
 
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 
