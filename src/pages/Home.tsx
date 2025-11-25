@@ -17,17 +17,13 @@ const Home: React.FC = () => {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
               <span className="text-primary font-display font-bold block">{t('home.hero.title')}</span>
             </h1>
-            
-            <p className="text-xl text-primary font-body mb-12 max-w-4xl leading-relaxed">
-              {t('home.hero.subtitle')}
-            </p>
-            
+
             <p className="text-xl text-primary font-body mb-12 max-w-4xl leading-relaxed">
               {language === 'en'
                 ? 'One-to-one nutrition consultations and community and school nutrition support — backed by science, focused on what\'s practical, and built to last.'
                 : 'Consultas de nutrición individuales y apoyo en nutrición comunitaria y escolar — basadas en evidencia, enfocadas en lo práctico y pensadas para durar.'}
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 mb-16">
               <Link
                 to="/consultations"
@@ -43,18 +39,18 @@ const Home: React.FC = () => {
                 {t('home.hero.about.button')}
               </Link>
             </div>
-          </div>
-        </section>
 
-        {/* Hero Media */}
-        <section className="w-full">
-          <img
-            src="/berries.png"
-            alt={language === 'en'
-              ? 'Fresh berries in a heart-shaped bowl'
-              : 'Frutos rojos en un cuenco con forma de corazón'}
-            style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }}
-          />
+            {/* Hero Media */}
+            <div className="w-full max-w-[600px] mx-auto">
+              <img
+                src="/berries.png"
+                alt={language === 'en'
+                  ? 'Fresh berries in a heart-shaped bowl'
+                  : 'Frutos rojos en un cuenco con forma de corazón'}
+                className="w-full h-auto object-cover rounded-2xl shadow-sm"
+              />
+            </div>
+          </div>
         </section>
       </div>
 
@@ -66,7 +62,7 @@ const Home: React.FC = () => {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-display font-bold text-primary mb-4">{t('home.impact.title')}</h2>
             </div>
-            
+
             <div className="bg-white p-12 rounded-lg shadow-lg text-center">
               <h3 className="text-3xl font-display font-bold text-primary mb-6">{t('home.impact.headline')}</h3>
               <p className="text-xl text-primary mb-8 max-w-3xl mx-auto leading-relaxed font-body">

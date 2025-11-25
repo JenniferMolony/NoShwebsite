@@ -22,7 +22,7 @@ const translations = {
     'nav.consultations': 'Consultations',
     'nav.collaborations': 'Collaborations',
     'nav.about': 'About',
-    
+
     // Home Page
     'home.hero.title': 'Straight, honest guidance about food & nutrition.',
     'home.hero.subtitle': 'One-to-one nutrition consultations and community nutrition support — backed by science, focused on what\'s practical, and built to last.',
@@ -32,11 +32,11 @@ const translations = {
     'home.impact.headline': 'Supporting school nutrition in Honduras',
     'home.impact.text': 'NoSh is proud to support Child Alliance Honduras with practical help for their school snack program. Discover how we\'re contributing behind the scenes.',
     'home.impact.button': 'View Project',
-    
+
     // Footer
-    'footer.copyright': '© 2024 NoSh by Jenni Molony. All rights reserved.',
+    'footer.copyright': '© NoSh by Jenni Molony. All rights reserved.',
     'footer.contact': 'Jenni.NoShNutrition@outlook.com',
-    
+
     // Consultations Page
     'consultations.title': 'Nutrition Consultations',
     'consultations.subtitle': 'Honest support tailored to real life',
@@ -74,7 +74,7 @@ const translations = {
     'consultations.phone.spain': 'Spain: 664 016 423',
     'consultations.phone.international': 'International: +353 85 789 9427',
     'consultations.available': 'Available in-person in Ciudad Zamora or online via secure video call',
-    
+
     // Collaborations Page
     'collaborations.title': 'Professional Collaborations',
     'collaborations.subtitle': 'Partnering with organizations to improve community nutrition',
@@ -116,7 +116,7 @@ const translations = {
     'collaborations.cta.title': 'Interested in Collaborating?',
     'collaborations.cta.text': 'Let\'s discuss how evidence-based nutrition expertise can enhance your community programs. Whether you\'re an NGO, healthcare organization, or community group, I\'m here to help create sustainable nutrition solutions.',
     'collaborations.cta.quote': 'Professional collaboration inquiries welcome - let\'s create meaningful nutrition impact together',
-    
+
     // About Page
     'about.title': 'About NoSh**',
     'about.subtitle': 'Meet Jenni and learn about the mission behind straight, honest nutrition communication',
@@ -159,7 +159,7 @@ const translations = {
     'nav.consultations': 'Consultas',
     'nav.collaborations': 'Colaboraciones',
     'nav.about': 'Acerca de',
-    
+
     // Home Page
     'home.hero.title': 'Orientación directa y honesta sobre alimentación y nutrición.',
     'home.hero.subtitle': 'Consultas nutricionales individuales y apoyo nutricional comunitario — respaldado por la ciencia, enfocado en lo práctico y construido para durar.',
@@ -169,11 +169,11 @@ const translations = {
     'home.impact.headline': 'Apoyando la nutrición escolar en Honduras',
     'home.impact.text': 'NoSh se enorgullece de apoyar a Child Alliance Honduras con ayuda práctica para su programa de meriendas escolares. Descubre cómo estamos contribuyendo desde lejos.',
     'home.impact.button': 'Ver Proyecto',
-    
+
     // Footer
-    'footer.copyright': '© 2024 NoSh por Jenni Molony. Todos los derechos reservados.',
+    'footer.copyright': '© NoSh por Jenni Molony. Todos los derechos reservados.',
     'footer.contact': 'Jenni.NoShNutrition@outlook.com',
-    
+
     // Consultations Page
     'consultations.title': 'Consultas Nutricionales',
     'consultations.subtitle': 'Apoyo honesto adaptado a la vida real',
@@ -211,7 +211,7 @@ const translations = {
     'consultations.phone.spain': 'España: 664 016 423',
     'consultations.phone.international': 'Internacional: +353 85 789 9427',
     'consultations.available': 'Disponible presencialmente en Ciudad Zamora o online vía videollamada segura',
-    
+
     // Collaborations Page
     'collaborations.title': 'Colaboraciones Profesionales',
     'collaborations.subtitle': 'Asociándose con organizaciones para mejorar la nutrición comunitaria',
@@ -253,7 +253,7 @@ const translations = {
     'collaborations.cta.title': '¿Interesado en Colaborar?',
     'collaborations.cta.text': 'Hablemos sobre cómo la experiencia nutricional basada en evidencia puede mejorar tus programas comunitarios. Ya seas una ONG, organización de salud o grupo comunitario, estoy aquí para ayudar a crear soluciones nutricionales sostenibles.',
     'collaborations.cta.quote': 'Consultas de colaboración profesional bienvenidas - creemos juntos un impacto nutricional significativo',
-    
+
     // About Page
     'about.title': 'Acerca de NoSh**',
     'about.subtitle': 'Conoce a Jenni y aprende sobre la misión detrás de la comunicación nutricional directa y honesta',
