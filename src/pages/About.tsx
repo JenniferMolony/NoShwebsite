@@ -27,7 +27,7 @@ const About: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <div className="md:col-span-1 order-first md:order-none">
                 <img
-                  src="/Jennifer Molony_nosh.png"
+                  src="/Jennifer Molony.png"
                   alt="Jenni Molony"
                   className="w-full h-auto rounded-2xl shadow-sm object-cover"
                 />
