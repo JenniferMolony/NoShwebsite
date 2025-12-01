@@ -25,15 +25,15 @@ const About: React.FC = () => {
           {/* About Jenni */}
           <section className="bg-white border-none shadow-none p-12">
             <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div className="md:col-span-1 order-first md:order-none">
+              <div className="md:col-span-1 order-first md:order-first">
                 <img
-                  src="/Jennifer Molony.png"
+                  src="/mnt/data/Jennifer Molony_nosh.png"
                   alt="Jenni Molony"
                   className="w-full h-auto rounded-2xl shadow-sm object-cover"
                 />
               </div>
 
-              <div className="md:col-span-1">
+              <div className="md:col-span-1 order-last md:order-last">
                 <h2 className="text-4xl font-display font-bold text-primary mb-8">{t('about.meet.title')}</h2>
                 <p className="text-xl text-primary mb-8 leading-relaxed font-body">
                   {t('about.meet.intro')}
