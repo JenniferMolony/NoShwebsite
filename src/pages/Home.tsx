@@ -14,12 +14,6 @@ const Home: React.FC = () => {
         {/* Hero Section */}
         <section className="pt-24 pb-8 sm:pt-24 sm:pb-10 lg:pt-32 lg:pb-12">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-left">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-12 tracking-tight leading-tight">
-              <span className="text-primary font-display font-bold block">{t('home.hero.title')}</span>
-            </h1>
-
-            <p className="text-xl text-primary font-body mb-12 max-w-4xl leading-relaxed">
-              {language === 'en'
                 ? 'One-to-one nutrition consultations and community and school nutrition support — backed by science, focused on what\'s practical, and built to last.'
                 : 'Consultas de nutrición individuales y apoyo en nutrición comunitaria y escolar — basadas en evidencia, enfocadas en lo práctico y pensadas para durar.'}
             </p>
@@ -40,14 +34,14 @@ const Home: React.FC = () => {
               </Link>
             </div>
 
-            {/* Hero Media */}
-            <div className="w-full max-w-[600px] mx-auto">
+            {/* Berries Image */}
+            <div className="w-full max-w-[600px] mx-auto mb-16">
               <img
-                src="/berries.png"
+                src="/mnt/data/a7194f9e-f5e3-4014-93c6-5a80a6b3eb0f.png"
                 alt={language === 'en'
                   ? 'Fresh berries in a heart-shaped bowl'
                   : 'Frutos rojos en un cuenco con forma de corazón'}
-                className="w-full h-auto object-cover rounded-2xl shadow-sm"
+                style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }}
               />
             </div>
           </div>
