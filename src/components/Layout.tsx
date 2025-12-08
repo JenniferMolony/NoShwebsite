@@ -29,8 +29,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   return (
-    <div className={`min-h-screen font-body ${theme === 'light' ? 'bg-white' : 'bg-background'
-      }`}>
+    <div className={`min-h-screen font-body ${
+      theme === 'light' ? 'bg-white' : 'bg-background'
+    }`}>
       {/* Navigation */}
       <nav className={theme === 'light' ? 'bg-white' : 'bg-background'}>
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -46,33 +47,36 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <div className="flex items-center space-x-2 mr-8">
                 <button
                   onClick={() => setLanguage('en')}
-                  className={`text-sm font-nav font-semibold transition-colors duration-300 ${language === 'en'
-                    ? 'text-primary'
-                    : 'text-primary/60 hover:text-primary'
-                    }`}
+                  className={`text-sm font-nav font-semibold transition-colors duration-300 ${
+                    language === 'en'
+                      ? 'text-primary'
+                      : 'text-primary/60 hover:text-primary'
+                  }`}
                 >
                   EN
                 </button>
                 <span className="text-primary/40">|</span>
                 <button
                   onClick={() => setLanguage('es')}
-                  className={`text-sm font-nav font-semibold transition-colors duration-300 ${language === 'es'
-                    ? 'text-primary'
-                    : 'text-primary/60 hover:text-primary'
-                    }`}
+                  className={`text-sm font-nav font-semibold transition-colors duration-300 ${
+                    language === 'es'
+                      ? 'text-primary'
+                      : 'text-primary/60 hover:text-primary'
+                  }`}
                 >
                   ES
                 </button>
               </div>
-
+              
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-3 py-2 text-sm font-nav font-bold transition-colors duration-300 ${isActive(item.href)
-                    ? 'text-primary crosshatch-border-bottom'
-                    : 'text-primary hover:text-primary/80'
-                    }`}
+                  className={`px-3 py-2 text-sm font-nav font-bold transition-colors duration-300 ${
+                    isActive(item.href)
+                      ? 'text-primary crosshatch-border-bottom'
+                      : 'text-primary hover:text-primary/80'
+                  }`}
                 >
                   {item.name}
                 </Link>
@@ -102,35 +106,38 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <div className="flex items-center justify-center space-x-4">
                   <button
                     onClick={() => setLanguage('en')}
-                    className={`px-4 py-2 text-sm font-nav font-semibold transition-colors duration-300 ${language === 'en'
-                      ? 'text-primary bg-secondary/20'
-                      : 'text-primary/60 hover:text-primary'
-                      }`}
+                    className={`px-4 py-2 text-sm font-nav font-semibold transition-colors duration-300 ${
+                      language === 'en'
+                        ? 'text-primary bg-secondary/20'
+                        : 'text-primary/60 hover:text-primary'
+                    }`}
                   >
                     EN
                   </button>
                   <button
                     onClick={() => setLanguage('es')}
-                    className={`px-4 py-2 text-sm font-nav font-semibold transition-colors duration-300 ${language === 'es'
-                      ? 'text-primary bg-secondary/20'
-                      : 'text-primary/60 hover:text-primary'
-                      }`}
+                    className={`px-4 py-2 text-sm font-nav font-semibold transition-colors duration-300 ${
+                      language === 'es'
+                        ? 'text-primary bg-secondary/20'
+                        : 'text-primary/60 hover:text-primary'
+                    }`}
                   >
                     ES
                   </button>
                 </div>
               </div>
-
+              
               <div className="px-2 pt-4 pb-6 space-y-2">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`block px-3 py-3 text-lg font-nav transition-colors duration-300 ${isActive(item.href)
-                      ? 'text-primary bg-secondary/20'
-                      : 'text-primary hover:text-primary/80 hover:bg-secondary/10'
-                      }`}
+                    className={`block px-3 py-3 text-lg font-nav transition-colors duration-300 ${
+                      isActive(item.href)
+                        ? 'text-primary bg-secondary/20'
+                        : 'text-primary hover:text-primary/80 hover:bg-secondary/10'
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -149,35 +156,35 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Footer */}
       <footer className={`mt-24 ${theme === 'light' ? 'bg-white' : 'bg-background'}`}>
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-12 text-center">
+          <div className="grid md:grid-cols-3 gap-12">
             {/* Brand */}
-            <div className="flex-1 max-w-sm">
+            <div>
               <div className="text-2xl font-display font-bold text-primary mb-6">NoSh**</div>
               <p className="text-primary mb-6 font-body text-xl">
-                {language === 'en'
+                {language === 'en' 
                   ? 'Simple, evidence-based food and nutrition guidance'
                   : 'Orientación alimentaria y nutricional simple y basada en evidencia'
                 }
               </p>
             </div>
-
+            
             {/* Contact */}
-            <div className="flex-1">
+            <div>
               <h3 className="font-display font-bold text-primary mb-6 text-xl">
                 {language === 'en' ? 'Contact' : 'Contacto'}
               </h3>
-              <div className="flex items-center justify-center text-primary mb-4">
+              <div className="flex items-center text-primary mb-4">
                 <Mail className="h-5 w-5 mr-3" />
                 <span className="font-body">{t('footer.contact')}</span>
               </div>
             </div>
-
+            
             {/* Social Links */}
-            <div className="flex-1">
+            <div>
               <h3 className="font-display font-bold text-primary mb-6 text-xl">
                 {language === 'en' ? 'Connect' : 'Conectar'}
               </h3>
-              <div className="flex justify-center space-x-6 mb-8">
+              <div className="flex space-x-6 mb-8">
                 <a href="#" className="text-primary hover:text-primary/80 transition-colors duration-300">
                   <Instagram className="h-6 w-6" />
                 </a>
@@ -189,7 +196,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               {/* Theme Switcher */}
               <button
                 onClick={toggleTheme}
-                className="flex items-center justify-center space-x-2 text-primary hover:text-primary/80 transition-colors duration-300 group mx-auto"
+                className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors duration-300 group"
                 aria-label={`Switch to ${theme === 'light' ? 'default' : 'light'} theme`}
               >
                 {theme === 'light' ? (
@@ -206,7 +213,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </button>
             </div>
           </div>
-
+          
           {/* Copyright */}
           <div className="mt-12 pt-8 border-t border-secondary/20 text-center">
             <p className="text-primary font-body">{t('footer.copyright')}</p>
