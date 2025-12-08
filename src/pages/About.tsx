@@ -6,7 +6,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 const About: React.FC = () => {
   const { theme } = useTheme();
   const { t } = useLanguage();
-
+  
   return (
     <div className={theme === 'light' ? 'bg-white' : 'bg-background'}>
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -24,21 +24,19 @@ const About: React.FC = () => {
         <div className="space-y-24">
           {/* About Jenni */}
           <section className="bg-white border-none shadow-none p-12">
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div className="md:col-span-1 order-first md:order-first">
-                <img
-                  src="/mnt/data/Jennifer Molony_nosh.png"
-                  alt="Jenni Molony"
-                  className="w-full h-auto rounded-2xl shadow-sm object-cover"
-                />
+            <div className="grid md:grid-cols-3 gap-12 items-start">
+              <div className="md:col-span-1">
+                <div className="bg-white w-56 h-56 mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-primary text-sm font-body">Photo of Jenni</span>
+                </div>
               </div>
-
-              <div className="md:col-span-1 order-last md:order-last">
+              
+              <div className="md:col-span-2">
                 <h2 className="text-4xl font-display font-bold text-primary mb-8">{t('about.meet.title')}</h2>
                 <p className="text-xl text-primary mb-8 leading-relaxed font-body">
                   {t('about.meet.intro')}
                 </p>
-
+                
                 {/* Professional Experience Highlight */}
                 <div className="mb-8 p-6 bg-primary/5 rounded-lg">
                   <h4 className="font-display font-bold text-primary mb-4 text-xl">{t('about.experience.title')}</h4>
@@ -61,18 +59,18 @@ const About: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-
+                
                 <p className="text-xl text-primary mb-12 leading-relaxed font-body">
                   {t('about.mission.text')}
                 </p>
-
+                
                 {/* Enhanced Mission Statement */}
                 <div className="p-6 bg-white border-l-4 border-primary">
                   <p className="text-xl text-primary font-body italic">
                     "{t('about.quote')}"
                   </p>
                 </div>
-
+                
                 {/* Credentials */}
                 <div className="space-y-6">
                   <div className="flex items-center text-primary">
@@ -109,7 +107,7 @@ const About: React.FC = () => {
                 </p>
               </div>
             </div>
-
+            
             <div className="mt-12 p-8 bg-white border-none shadow-none">
               <p className="text-xl text-primary font-body italic">
                 "{t('about.warning')}"
@@ -130,7 +128,7 @@ const About: React.FC = () => {
                   {t('about.evidence.text')}
                 </p>
               </div>
-
+              
               <div className="bg-white border-none shadow-none p-12 text-center">
                 <div className="w-16 h-16 bg-white text-primary flex items-center justify-center mb-8 mx-auto">
                   <Globe className="h-8 w-8" />
@@ -140,7 +138,7 @@ const About: React.FC = () => {
                   {t('about.accessible.text')}
                 </p>
               </div>
-
+              
               <div className="bg-white border-none shadow-none p-12 text-center">
                 <div className="w-16 h-16 bg-white text-primary flex items-center justify-center mb-8 mx-auto">
                   <GraduationCap className="h-8 w-8" />
@@ -155,13 +153,13 @@ const About: React.FC = () => {
 
           {/* Future Plans */}
           <section>
-            <img
-              src="/zamora.jpg"
-              alt="Historic town of Zamora, Spain with traditional architecture and river reflections"
+            <img 
+              src="/zamora.jpg" 
+              alt="Historic town of Zamora, Spain with traditional architecture and river reflections" 
               className="w-full h-auto"
             />
             <div className="bg-white p-12">
-              <div className="flex items-center text-primary">
+            <div className="flex items-center text-primary">
                 <MapPin className="h-6 w-6 mr-3 text-primary" />
                 <span className="text-lg font-body">
                   {t('language') === 'en' ? 'Zamora, Spain - Opening 2026' : 'Zamora, España - Apertura 2026'}
