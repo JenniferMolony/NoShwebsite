@@ -32,7 +32,10 @@ const translations = {
     'home.impact.headline': 'Supporting school nutrition in Honduras',
     'home.impact.text': 'NoSh is proud to support Child Alliance Honduras with practical help for their school snack program. Discover how we\'re contributing behind the scenes.',
     'home.impact.button': 'View Project',
-    
+
+    // Home Testimonials
+    'home.testimonials.title': 'What Clients Say',
+
     // Footer
     'footer.copyright': '© 2024 NoSh by Jenni Molony. All rights reserved.',
     'footer.contact': 'Jenni.NoShNutrition@outlook.com',
@@ -169,7 +172,10 @@ const translations = {
     'home.impact.headline': 'Apoyando la nutrición escolar en Honduras',
     'home.impact.text': 'NoSh se enorgullece de apoyar a Child Alliance Honduras con ayuda práctica para su programa de meriendas escolares. Descubre cómo estamos contribuyendo desde lejos.',
     'home.impact.button': 'Ver Proyecto',
-    
+
+    // Home Testimonials
+    'home.testimonials.title': 'Lo que dicen los clientes',
+
     // Footer
     'footer.copyright': '© 2024 NoSh por Jenni Molony. Todos los derechos reservados.',
     'footer.contact': 'Jenni.NoShNutrition@outlook.com',
